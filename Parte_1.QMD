@@ -1,0 +1,45 @@
+---
+title: Visualização de dados com R
+subtitle: Aula 1 - Introdução a visualização de dados
+author: Marcus Ramalho
+format: 
+    revealjs: 
+        theme: dark
+date: today
+footer: Universidade Federal Fluminense - Programa de formação de executivos - Ciência de dados
+---
+
+## O curso
+
+Aula 1
+
+-   Tipos de gráfico por variável
+-   Escalas
+-   Gráficos no R
+-   ggplot2
+-   esquisse - ggplot builder
+-   Exemplos
+-   Exercícios de fixação
+-   Tarefa com nota
+
+## O que são gráficos?
+
+::: {layout-ncol=2}
+
+-   Gráficos são representações visuais de dados.
+
+-   Gráficos são uma forma de comunicação.
+
+-   Gráficos são uma forma de análise.
+
+-   Gráficos são uma forma de exploração de dados.
+
+-   Gráficos são uma forma de visualização de dados.
+
+```{r}
+library(ggplot2)
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
+```
+
+:::
