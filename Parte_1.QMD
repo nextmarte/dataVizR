@@ -4,12 +4,19 @@ subtitle: Aula 1 - Introdução a visualização de dados
 author: Marcus Ramalho
 format: 
     revealjs: 
+        incremental: true  
+        transition: slide
+        background-transition: fade
         theme: dark
 date: today
 footer: Universidade Federal Fluminense - Programa de formação de executivos - Ciência de dados
 ---
 
-## O curso
+```{r}
+library(tidyverse)
+```
+
+## O curso {auto-animate=true}
 
 Aula 1
 
@@ -22,24 +29,40 @@ Aula 1
 -   Exercícios de fixação
 -   Tarefa com nota
 
-## O que são gráficos?
+## O que são gráficos? {.center}
 
 ::: {layout-ncol=2}
 
--   Gráficos são representações visuais de dados.
+-   Uma forma de comunicação.
 
--   Gráficos são uma forma de comunicação.
+-   Uma forma de análise.
 
--   Gráficos são uma forma de análise.
-
--   Gráficos são uma forma de exploração de dados.
+-   Uma forma de exploração de dados.
 
 -   Gráficos são uma forma de visualização de dados.
 
 ```{r}
-library(ggplot2)
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
+# Using median
+mpg %>%
+    mutate(class = fct_reorder(class, hwy, .fun = "median")) %>%
+    ggplot(aes(x = reorder(class, hwy), y = hwy, fill = class)) +
+    geom_boxplot() +
+    xlab("class") +
+    theme(legend.position = "none") +
+    ylab("Milhas por galão") +
+    xlab("Moldelo") +
+    ggtitle("Milhas por galão por modelo")
+
+# Using number of observation per group
+mpg %>%
+    mutate(class = fct_reorder(class, hwy, .fun = "length")) %>%
+    ggplot(aes(x = class, y = hwy, fill = class)) +
+    geom_boxplot() +
+    xlab("class") +
+    theme(legend.position = "none") +
+    ylab("Milhas por galão") +
+    xlab("Moldelo") +
+    ggtitle("Milhas por galão por modelo")
 ```
 
 :::
