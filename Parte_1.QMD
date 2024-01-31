@@ -66,3 +66,131 @@ mpg %>%
 ```
 
 :::
+
+## Tipos de gráficos por variável
+
+## Gráfico com variável quantitativa
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy)) +
+    geom_point(aes(color = class), alpha = 0.5, size = 3) +
+    theme_minimal() +
+    labs(
+        title = "Volume dos cilindros do motor vs Milhas por galão na rodovia",
+        x = "Volume ",
+        y = "Milhas por galão na rodovia",
+        color = "Modelo"
+    ) +
+    theme(
+        plot.title = element_text(hjust = 0.5),
+        legend.position = "bottom"
+    )
+```
+
+## Gráfico com variável qualitativa
+
+```{r}
+# Carregar o pacote necessário
+library(ggplot2)
+
+# Criar o gráfico
+ggplot(mpg, aes(x = class)) +
+    geom_bar(aes(fill = manufacturer), width = 0.7) +
+    theme_minimal() +
+    labs(
+        title = "Contagem de Carros por Classe de Veículo",
+        x = "Classe de Veículo",
+        y = "Contagem",
+        fill = "Fabricante"
+    ) +
+    theme(
+        plot.title = element_text(hjust = 0.5),
+        legend.position = "bottom"
+    )
+```
+
+
+## Gráfico com variável temporal
+
+```{r}
+# Carregar o pacote necessário
+library(ggplot2)
+
+# Criar o gráfico
+ggplot(economics, aes(x = date, y = unemploy)) +
+    geom_line(color = "blue", size = 1) +
+    theme_minimal() +
+    labs(
+        title = "Desemprego nos EUA ao longo do tempo",
+        x = "Data",
+        y = "Desemprego (em milhares)"
+    ) +
+    theme(
+        plot.title = element_text(hjust = 0.5)
+    )
+```
+
+## mapa
+
+```{r}
+# Carregar os pacotes necessários
+library(ggplot2)
+library(maps)
+
+# Obter os dados do mapa
+usa_map <- map_data("usa")
+
+# Criar o mapa
+ggplot() +
+    geom_polygon(data = usa_map, aes(x = long, y = lat, group = group), fill = "lightblue", color = "white") +
+    theme_minimal() +
+    labs(
+        title = "Mapa dos EUA"
+    ) +
+    theme(
+        plot.title = element_text(hjust = 0.5),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks = element_blank()
+    )
+```
+
+## likert
+  
+```{r}
+# Carregar o pacote necessário
+library(ggplot2)
+
+# Criar dados de exemplo
+set.seed(123)
+data <- data.frame(
+    Pergunta = rep(c("Pergunta 1", "Pergunta 2", "Pergunta 3"), each = 500),
+    Resposta = factor(sample(1:5, 1500, replace = TRUE), levels = 1:5, labels = c("Discordo Totalmente", "Discordo", "Neutro", "Concordo", "Concordo Totalmente"))
+)
+
+# Calcular a contagem de respostas para cada pergunta
+data_count <- table(data$Pergunta, data$Resposta)
+
+# Converter a tabela em um data frame para plotagem
+data_plot <- as.data.frame(data_count)
+names(data_plot) <- c("Pergunta", "Resposta", "Contagem")
+
+# Criar o gráfico Likert
+ggplot(data_plot, aes(x = Pergunta, y = Contagem, fill = Resposta)) +
+    geom_bar(stat = "identity") +
+    coord_flip() +
+    theme_minimal() +
+    labs(
+        title = "Respostas da Pesquisa",
+        x = "Pergunta",
+        y = "Contagem",
+        fill = "Resposta"
+    ) +
+    theme(
+        plot.title = element_text(hjust = 0.5),
+        legend.position = "bottom"
+    )
+
+```
