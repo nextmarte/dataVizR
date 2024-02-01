@@ -20,177 +20,87 @@ library(tidyverse)
 
 Aula 1
 
--   Tipos de gráfico por variável
--   Escalas
--   Gráficos no R
--   ggplot2
--   esquisse - ggplot builder
--   Exemplos
+-   Gráficos no R base, plot, hist, boxplot
+-   Escalas Logarítmicas e Lineares
+-   Tipos de Gráficos por Tipo de Variável
+-   gramática dos gráficos e ggplot2
+    -   cores, formas, tamanhos
+    -   Facets
+    -   Rótulos, títulos e temas
+-   EDA com o pacote esquisse
 -   Exercícios de fixação
 -   Tarefa com nota
 
-## O que são gráficos? {.center}
-
-::: {layout-ncol=2}
-
--   Uma forma de comunicação.
-
--   Uma forma de análise.
-
--   Uma forma de exploração de dados.
-
--   Gráficos são uma forma de visualização de dados.
+## Gráficos no R base - plot
 
 ```{r}
-# Using median
-mpg %>%
-    mutate(class = fct_reorder(class, hwy, .fun = "median")) %>%
-    ggplot(aes(x = reorder(class, hwy), y = hwy, fill = class)) +
-    geom_boxplot() +
-    xlab("class") +
-    theme(legend.position = "none") +
-    ylab("Milhas por galão") +
-    xlab("Moldelo") +
-    ggtitle("Milhas por galão por modelo")
+#| echo: true
 
-# Using number of observation per group
-mpg %>%
-    mutate(class = fct_reorder(class, hwy, .fun = "length")) %>%
-    ggplot(aes(x = class, y = hwy, fill = class)) +
-    geom_boxplot() +
-    xlab("class") +
-    theme(legend.position = "none") +
-    ylab("Milhas por galão") +
-    xlab("Moldelo") +
-    ggtitle("Milhas por galão por modelo")
-```
-
-:::
-
-## Tipos de gráficos por variável
-
-## Gráfico com variável quantitativa
-
-```{r}
-ggplot(mpg, aes(x = displ, y = hwy)) +
-    geom_point(aes(color = class), alpha = 0.5, size = 3) +
-    theme_minimal() +
-    labs(
-        title = "Volume dos cilindros do motor vs Milhas por galão na rodovia",
-        x = "Volume ",
-        y = "Milhas por galão na rodovia",
-        color = "Modelo"
-    ) +
-    theme(
-        plot.title = element_text(hjust = 0.5),
-        legend.position = "bottom"
-    )
-```
-
-## Gráfico com variável qualitativa
-
-```{r}
-# Carregar o pacote necessário
-library(ggplot2)
-
-# Criar o gráfico
-ggplot(mpg, aes(x = class)) +
-    geom_bar(aes(fill = manufacturer), width = 0.7) +
-    theme_minimal() +
-    labs(
-        title = "Contagem de Carros por Classe de Veículo",
-        x = "Classe de Veículo",
-        y = "Contagem",
-        fill = "Fabricante"
-    ) +
-    theme(
-        plot.title = element_text(hjust = 0.5),
-        legend.position = "bottom"
-    )
-```
-
-
-## Gráfico com variável temporal
-
-```{r}
-# Carregar o pacote necessário
-library(ggplot2)
-
-# Criar o gráfico
-ggplot(economics, aes(x = date, y = unemploy)) +
-    geom_line(color = "blue", size = 1) +
-    theme_minimal() +
-    labs(
-        title = "Desemprego nos EUA ao longo do tempo",
-        x = "Data",
-        y = "Desemprego (em milhares)"
-    ) +
-    theme(
-        plot.title = element_text(hjust = 0.5)
-    )
-```
-
-## mapa
-
-```{r}
-# Carregar os pacotes necessários
-library(ggplot2)
-library(maps)
-
-# Obter os dados do mapa
-usa_map <- map_data("usa")
-
-# Criar o mapa
-ggplot() +
-    geom_polygon(data = usa_map, aes(x = long, y = lat, group = group), fill = "lightblue", color = "white") +
-    theme_minimal() +
-    labs(
-        title = "Mapa dos EUA"
-    ) +
-    theme(
-        plot.title = element_text(hjust = 0.5),
-        axis.title.x = element_blank(),
-        axis.title.y = element_blank(),
-        axis.text.x = element_blank(),
-        axis.text.y = element_blank(),
-        axis.ticks = element_blank()
-    )
-```
-
-## likert
-  
-```{r}
-# Carregar o pacote necessário
-library(ggplot2)
-
-# Criar dados de exemplo
-set.seed(123)
-data <- data.frame(
-    Pergunta = rep(c("Pergunta 1", "Pergunta 2", "Pergunta 3"), each = 500),
-    Resposta = factor(sample(1:5, 1500, replace = TRUE), levels = 1:5, labels = c("Discordo Totalmente", "Discordo", "Neutro", "Concordo", "Concordo Totalmente"))
+plot(iris$Sepal.Length, iris$Sepal.Width,
+    col = iris$Species, pch = 19,
+    xlab = "Comprimento", ylab = "Largura", main = "Comprimento x Largura da Sépala"
 )
 
-# Calcular a contagem de respostas para cada pergunta
-data_count <- table(data$Pergunta, data$Resposta)
-
-# Converter a tabela em um data frame para plotagem
-data_plot <- as.data.frame(data_count)
-names(data_plot) <- c("Pergunta", "Resposta", "Contagem")
-
-# Criar o gráfico Likert
-ggplot(data_plot, aes(x = Pergunta, y = Contagem, fill = Resposta)) +
-    geom_bar(stat = "identity") +
-    coord_flip() +
-    theme_minimal() +
-    labs(
-        title = "Respostas da Pesquisa",
-        x = "Pergunta",
-        y = "Contagem",
-        fill = "Resposta"
-    ) +
-    theme(
-        plot.title = element_text(hjust = 0.5),
-        legend.position = "bottom"
-    )
-
+# Legenda
+legend(
+    "topright",
+    legend = levels(iris$Species),
+    col = c("black", "red", "green"),
+    pch = 19,
+    title = "Espécies",
+    bg = "lightgray"
+)
 ```
+
+## Gráficos no R base - hist
+
+```{r}
+#| echo: true
+hist(iris$Sepal.Length,
+    xlab = "Comprimento da Sépala",
+    ylab = "Frequência",
+    main = "Histograma do Comprimento da Sépala",
+    col = "lightblue",
+    border = "black"
+)
+```
+
+## Gráficos no R base - boxplot
+
+```{r}
+#| echo: true
+
+boxplot(iris$Sepal.Length,
+    xlab = "Espécies",
+    ylab = "Comprimento da Sépala",
+    main = "Gráfico de Caixa do Comprimento da Sépala",
+    col = "lightblue",
+    border = "black"
+)
+```
+
+## Gráficos no R base - barplot
+
+```{r}
+#| echo: true
+
+barplot(table(iris$Species),
+    xlab = "Espécies",
+    ylab = "Contagem",
+    main = "Gráfico de Barras das Espécies",
+    col = "lightblue",
+    border = "black"
+)
+```
+
+## Gráficos no R base - pie
+
+```{r}
+#| echo: true
+pie(table(iris$Species),
+    main = "Gráfico de Pizza das Espécies",
+    col = c("lightblue", "lightgreen", "lightpink"),
+    border = "black"
+)
+```
+
