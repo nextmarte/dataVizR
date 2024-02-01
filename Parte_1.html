@@ -579,7 +579,73 @@ Marcus Ramalho
 <span id="cb8-4"><a href=""></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"><div class="quarto-auto-generated-content">
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="ggplot2---elementos-da-gramática" class="slide level2">
+<h2>ggplot2 - Elementos da gramática</h2>
+
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="ggplot2---elementos-da-gramática-1" class="slide level2">
+<h2>ggplot2 - Elementos da gramática</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="co"># Carregar a biblioteca ggplot2</span></span>
+<span id="cb9-2"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb9-3"><a href=""></a></span>
+<span id="cb9-4"><a href=""></a><span class="co"># Dados: Este é o conjunto de dados que queremos visualizar.</span></span>
+<span id="cb9-5"><a href=""></a>data <span class="ot">&lt;-</span> mtcars</span>
+<span id="cb9-6"><a href=""></a></span>
+<span id="cb9-7"><a href=""></a><span class="co"># Aesthetics: Mapeia variáveis nos dados para aspectos visuais do gráfico.</span></span>
+<span id="cb9-8"><a href=""></a>aes <span class="ot">&lt;-</span> <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> hp)</span>
+<span id="cb9-9"><a href=""></a></span>
+<span id="cb9-10"><a href=""></a><span class="co"># Geometrias: Descreve o tipo de gráfico que queremos criar.</span></span>
+<span id="cb9-11"><a href=""></a>geom <span class="ot">&lt;-</span> <span class="fu">geom_point</span>()</span>
+<span id="cb9-12"><a href=""></a></span>
+<span id="cb9-13"><a href=""></a><span class="co"># Escalas: Controla como os dados são mapeados para os aspectos visuais do gráfico.</span></span>
+<span id="cb9-14"><a href=""></a>scale <span class="ot">&lt;-</span> <span class="fu">scale_y_log10</span>()</span>
+<span id="cb9-15"><a href=""></a></span>
+<span id="cb9-16"><a href=""></a><span class="co"># Facets: Permite criar múltiplos gráficos pequenos, cada um mostrando um subconjunto dos dados.</span></span>
+<span id="cb9-17"><a href=""></a>facet <span class="ot">&lt;-</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>cyl)</span>
+<span id="cb9-18"><a href=""></a></span>
+<span id="cb9-19"><a href=""></a><span class="co"># Estatísticas: Realiza cálculos nos dados.</span></span>
+<span id="cb9-20"><a href=""></a>stat <span class="ot">&lt;-</span> <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"point"</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">3</span>)</span>
+<span id="cb9-21"><a href=""></a></span>
+<span id="cb9-22"><a href=""></a><span class="co"># Coordenadas: Define o sistema de coordenadas do gráfico.</span></span>
+<span id="cb9-23"><a href=""></a></span>
+<span id="cb9-24"><a href=""></a><span class="co"># Tema: Controla a aparência não-dados do gráfico, como a cor de fundo e a fonte do texto.</span></span>
+<span id="cb9-25"><a href=""></a>theme <span class="ot">&lt;-</span> <span class="fu">theme_minimal</span>()</span>
+<span id="cb9-26"><a href=""></a></span>
+<span id="cb9-27"><a href=""></a><span class="co"># Títulos e legendas</span></span>
+<span id="cb9-28"><a href=""></a>labels <span class="ot">&lt;-</span> <span class="fu">labs</span>(</span>
+<span id="cb9-29"><a href=""></a>    <span class="at">title =</span> <span class="st">"Relação entre MPG e HP"</span>,</span>
+<span id="cb9-30"><a href=""></a>    <span class="at">x =</span> <span class="st">"MPG"</span>,</span>
+<span id="cb9-31"><a href=""></a>    <span class="at">y =</span> <span class="st">"HP (escala logarítmica)"</span>,</span>
+<span id="cb9-32"><a href=""></a>    <span class="at">color =</span> <span class="st">"Número de cilindros"</span></span>
+<span id="cb9-33"><a href=""></a>)</span>
+<span id="cb9-34"><a href=""></a></span>
+<span id="cb9-35"><a href=""></a><span class="co"># Criar o gráfico</span></span>
+<span id="cb9-36"><a href=""></a><span class="fu">ggplot</span>(data, aes) <span class="sc">+</span> geom <span class="sc">+</span> scale <span class="sc">+</span> facet <span class="sc">+</span> stat <span class="sc">+</span> theme <span class="sc">+</span> labels</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="ggplot2---elementos-da-gramática-2" class="slide level2">
+<h2>ggplot2 - Elementos da gramática</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="co"># Carregar a biblioteca ggplot2</span></span>
+<span id="cb10-2"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb10-3"><a href=""></a></span>
+<span id="cb10-4"><a href=""></a><span class="co"># Criar o gráfico</span></span>
+<span id="cb10-5"><a href=""></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> hp)) <span class="sc">+</span></span>
+<span id="cb10-6"><a href=""></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb10-7"><a href=""></a>    <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb10-8"><a href=""></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>cyl) <span class="sc">+</span></span>
+<span id="cb10-9"><a href=""></a>    <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"point"</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb10-10"><a href=""></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb10-11"><a href=""></a>    <span class="fu">labs</span>(</span>
+<span id="cb10-12"><a href=""></a>        <span class="at">title =</span> <span class="st">"Relação entre MPG e HP"</span>,</span>
+<span id="cb10-13"><a href=""></a>        <span class="at">x =</span> <span class="st">"MPG"</span>,</span>
+<span id="cb10-14"><a href=""></a>        <span class="at">y =</span> <span class="st">"HP (escala logarítmica)"</span>,</span>
+<span id="cb10-15"><a href=""></a>        <span class="at">color =</span> <span class="st">"Número de cilindros"</span></span>
+<span id="cb10-16"><a href=""></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>Universidade Federal Fluminense - Programa de formação de executivos - Ciência de dados</p>
 </div>

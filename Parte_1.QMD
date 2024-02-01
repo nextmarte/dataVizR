@@ -181,3 +181,110 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
     labs(title = "Comprimento x Largura da Sépala", x = "Comprimento", y = "Largura") +
     theme_minimal()
 ```
+
+## ggplot2 - Elementos da gramática
+
+
+```{r}
+
+# Dados: Este é o conjunto de dados que queremos visualizar.
+data <- mtcars
+
+# Aesthetics: Mapeia variáveis nos dados para aspectos visuais do gráfico.
+aes <- aes(x = mpg, y = hp)
+
+# Geometrias: Descreve o tipo de gráfico que queremos criar.
+geom <- geom_point()
+
+# Escalas: Controla como os dados são mapeados para os aspectos visuais do gráfico.
+scale <- scale_y_log10()
+
+# Facets: Permite criar múltiplos gráficos pequenos, cada um mostrando um subconjunto dos dados.
+facet <- facet_wrap(~cyl)
+
+# Estatísticas: Realiza cálculos nos dados.
+stat <- stat_summary(fun = mean, geom = "point", color = "red", size = 3)
+
+# Coordenadas: Define o sistema de coordenadas do gráfico.
+
+# Tema: Controla a aparência não-dados do gráfico, como a cor de fundo e a fonte do texto.
+theme <- theme_minimal()
+
+# Títulos e legendas
+labels <- labs(
+    title = "Relação entre MPG e HP",
+    x = "MPG",
+    y = "HP (escala logarítmica)",
+    color = "Número de cilindros"
+)
+
+# Criar o gráfico
+ggplot(data, aes) + geom + scale + facet + stat + theme + labels
+
+```
+
+## ggplot2 - Elementos da gramática
+
+
+```{r}
+#| echo: true
+#| eval: false
+
+# Dados: Este é o conjunto de dados que queremos visualizar.
+data <- mtcars
+
+# Aesthetics: Mapeia variáveis nos dados para aspectos visuais do gráfico.
+aes <- aes(x = mpg, y = hp)
+
+# Geometrias: Descreve o tipo de gráfico que queremos criar.
+geom <- geom_point()
+
+# Escalas: Controla como os dados são mapeados para os aspectos visuais do gráfico.
+scale <- scale_y_log10()
+
+# Facets: Permite criar múltiplos gráficos pequenos, cada um mostrando um subconjunto dos dados.
+facet <- facet_wrap(~cyl)
+
+# Estatísticas: Realiza cálculos nos dados.
+stat <- stat_summary(fun = mean, geom = "point", color = "red", size = 3)
+
+# Coordenadas: Define o sistema de coordenadas do gráfico.
+
+# Tema: Controla a aparência não-dados do gráfico, como a cor de fundo e a fonte do texto.
+theme <- theme_minimal()
+
+# Títulos e legendas
+labels <- labs(
+    title = "Relação entre MPG e HP",
+    x = "MPG",
+    y = "HP (escala logarítmica)",
+    color = "Número de cilindros"
+)
+
+# Criar o gráfico
+ggplot(data, aes) + geom + scale + facet + stat + theme + labels
+
+```
+
+## ggplot2 - Elementos da gramática
+
+
+```{r}
+#| echo: true
+#| eval: false
+
+# Criar o gráfico
+ggplot(mtcars, aes(x = mpg, y = hp)) +
+    geom_point() +
+    scale_y_log10() +
+    facet_wrap(~cyl) +
+    stat_summary(fun = mean, geom = "point", color = "red", size = 3) +
+    theme_minimal() +
+    labs(
+        title = "Relação entre MPG e HP",
+        x = "MPG",
+        y = "HP (escala logarítmica)",
+        color = "Número de cilindros"
+    )
+
+```
