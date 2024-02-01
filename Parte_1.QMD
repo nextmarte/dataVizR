@@ -104,3 +104,80 @@ pie(table(iris$Species),
 )
 ```
 
+## Escalas Lineares e Logarítmicas
+
+:::{layout-ncol=2}
+
+```{r}
+#| echo: true
+
+x <- seq(1, 100, 1)
+y <- x^2
+
+plot(x, y, type = "l", col = "blue", lwd = 2, xlab = "X", ylab = "Y", main = "Gráfico com Escala Linear")
+```
+
+-  Escalas lineares são as mais comuns
+-  Representam a relação entre duas variáveis de forma proporcional
+-  Dados variam de forma linear
+
+:::
+
+## Escalas Lineares e Logarítmicas
+
+:::{layout-ncol=2}
+
+Exemplo de gráfico com escala logarítmica
+
+```{r}
+#| echo: true
+
+# Dados
+x <- seq(1, 100, 1)
+y <- exp(x)
+
+# Gráfico com escala logarítmica no eixo y
+plot(x, y,
+    type = "l", col = "blue", lwd = 2,
+    xlab = "X", ylab = "Y (log scale)",
+    main = "Gráfico com Escala Logarítmica",
+    log = "y"
+)
+```
+
+## Tipo de Gráficos por Tipo de Variável
+
+-   Variáveis categóricas
+    -   barras
+    -   setor
+    -   etc...
+-   Variáveis numéricas
+    -   Histograma
+    -   boxplot
+    -   Gráfico de dispersão
+    -   etc...
+  
+## Tipo de Gráficos por Tipo de Variável
+
+Ferramentas úteis: 
+
+```{=html}
+<iframe width="1120" height="500" src="https://www.data-to-viz.com/" title="Webpage example"></iframe>
+```
+
+## Gramática dos gráficos e ggplot2
+
+O que é a gramática dos gráficos?
+
+-   É um conjunto de regras que descrevem a estrutura de um gráfico e como ele é construído a partir dos dados.
+-   O ggplot2 é um pacote do R que implementa a gramática dos gráficos.
+
+## ggplot2 - Exemplo
+  
+```{r}  
+#| echo: true
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+    geom_point() +
+    labs(title = "Comprimento x Largura da Sépala", x = "Comprimento", y = "Largura") +
+    theme_minimal()
+```

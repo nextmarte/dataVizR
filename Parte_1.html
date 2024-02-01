@@ -492,7 +492,94 @@ Marcus Ramalho
 <span id="cb5-5"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"><div class="quarto-auto-generated-content">
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="escalas-lineares-e-logarítmicas" class="slide level2">
+<h2>Escalas Lineares e Logarítmicas</h2>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">100</span>, <span class="dv">1</span>)</span>
+<span id="cb6-2"><a href=""></a>y <span class="ot">&lt;-</span> x<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb6-3"><a href=""></a></span>
+<span id="cb6-4"><a href=""></a><span class="fu">plot</span>(x, y, <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">xlab =</span> <span class="st">"X"</span>, <span class="at">ylab =</span> <span class="st">"Y"</span>, <span class="at">main =</span> <span class="st">"Gráfico com Escala Linear"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li class="fragment">Escalas lineares são as mais comuns</li>
+<li class="fragment">Representam a relação entre duas variáveis de forma proporcional</li>
+<li class="fragment">Dados variam de forma linear</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="escalas-lineares-e-logarítmicas-1" class="slide level2">
+<h2>Escalas Lineares e Logarítmicas</h2>
+<p>:::{layout-ncol=2}</p>
+<p>Exemplo de gráfico com escala logarítmica</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="co"># Dados</span></span>
+<span id="cb7-2"><a href=""></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">100</span>, <span class="dv">1</span>)</span>
+<span id="cb7-3"><a href=""></a>y <span class="ot">&lt;-</span> <span class="fu">exp</span>(x)</span>
+<span id="cb7-4"><a href=""></a></span>
+<span id="cb7-5"><a href=""></a><span class="co"># Gráfico com escala logarítmica no eixo y</span></span>
+<span id="cb7-6"><a href=""></a><span class="fu">plot</span>(x, y,</span>
+<span id="cb7-7"><a href=""></a>    <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lwd =</span> <span class="dv">2</span>,</span>
+<span id="cb7-8"><a href=""></a>    <span class="at">xlab =</span> <span class="st">"X"</span>, <span class="at">ylab =</span> <span class="st">"Y (log scale)"</span>,</span>
+<span id="cb7-9"><a href=""></a>    <span class="at">main =</span> <span class="st">"Gráfico com Escala Logarítmica"</span>,</span>
+<span id="cb7-10"><a href=""></a>    <span class="at">log =</span> <span class="st">"y"</span></span>
+<span id="cb7-11"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="tipo-de-gráficos-por-tipo-de-variável" class="slide level2">
+<h2>Tipo de Gráficos por Tipo de Variável</h2>
+<ul>
+<li class="fragment">Variáveis categóricas
+<ul>
+<li class="fragment">barras</li>
+<li class="fragment">setor</li>
+<li class="fragment">etc…</li>
+</ul></li>
+<li class="fragment">Variáveis numéricas
+<ul>
+<li class="fragment">Histograma</li>
+<li class="fragment">boxplot</li>
+<li class="fragment">Gráfico de dispersão</li>
+<li class="fragment">etc…</li>
+</ul></li>
+</ul>
+</section>
+<section id="tipo-de-gráficos-por-tipo-de-variável-1" class="slide level2">
+<h2>Tipo de Gráficos por Tipo de Variável</h2>
+<p>Ferramentas úteis:</p>
+<iframe width="1120" height="500" src="https://www.data-to-viz.com/" title="Webpage example"></iframe>
+</section>
+<section id="gramática-dos-gráficos-e-ggplot2" class="slide level2">
+<h2>Gramática dos gráficos e ggplot2</h2>
+<p>O que é a gramática dos gráficos?</p>
+<ul>
+<li class="fragment">É um conjunto de regras que descrevem a estrutura de um gráfico e como ele é construído a partir dos dados.</li>
+<li class="fragment">O ggplot2 é um pacote do R que implementa a gramática dos gráficos.</li>
+</ul>
+</section>
+<section id="ggplot2---exemplo" class="slide level2">
+<h2>ggplot2 - Exemplo</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span></span>
+<span id="cb8-2"><a href=""></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb8-3"><a href=""></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Comprimento x Largura da Sépala"</span>, <span class="at">x =</span> <span class="st">"Comprimento"</span>, <span class="at">y =</span> <span class="st">"Largura"</span>) <span class="sc">+</span></span>
+<span id="cb8-4"><a href=""></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>Universidade Federal Fluminense - Programa de formação de executivos - Ciência de dados</p>
 </div>
