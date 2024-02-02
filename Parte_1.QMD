@@ -21,12 +21,12 @@ library(tidyverse)
 Aula 1
 
 -   Gráficos no R base, plot, hist, boxplot
--   Escalas Logarítmicas e Lineares
--   Tipos de Gráficos por Tipo de Variável
 -   gramática dos gráficos e ggplot2
     -   cores, formas, tamanhos
     -   Facets
     -   Rótulos, títulos e temas
+-   Escalas Logarítmicas e Lineares
+-   Tipos de Gráficos por Tipo de Variável
 -   EDA com o pacote esquisse
 -   Exercícios de fixação
 -   Tarefa com nota
