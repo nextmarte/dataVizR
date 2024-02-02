@@ -104,6 +104,44 @@ pie(table(iris$Species),
 )
 ```
 
+
+## Escalas contínuas e discretas
+
+As escalas controlam a forma como os dados são mapeados para os aspectos visuais do gráfico. 
+
+```{r}
+url <- "https://tinyurl.com/mtktm8e5"
+insurance <- read.csv(url)
+# modify the x and y axes and specify the colors to be used
+ggplot(
+    data = insurance,
+    mapping = aes(
+        x = age,
+        y = expenses,
+        color = smoker
+    )
+) +
+    geom_point(
+        alpha = .5,
+        size = 2
+    ) +
+    geom_smooth(
+        method = "lm",
+        se = FALSE,
+        size = 1.5
+    ) +
+    scale_x_continuous(breaks = seq(0, 70, 10)) +
+    scale_y_continuous(
+        breaks = seq(0, 60000, 20000),
+        label = scales::dollar
+    ) +
+    scale_color_manual(values = c(
+        "indianred3",
+        "cornflowerblue"
+    ))
+```
+
+
 ## Escalas Lineares e Logarítmicas
 
 :::{layout-ncol=2}
