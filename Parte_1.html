@@ -405,23 +405,72 @@ Marcus Ramalho
 
   <p class="date">2024-02-02</p>
 </section>
+<section>
+<section id="marcus-ramalho" class="title-slide slide level1 center">
+<h1>Marcus Ramalho</h1>
+<ul>
+<li class="fragment">Pesquiso FII’s/PKM/Web3.0 com ciência de dados</li>
+<li class="fragment">Matlab/Fortran/Pascal/VBA/AutoLISP(LISP)/PHP/HTML/<br>
+M(power query)/TypeScript/Python/R❤️e Rust(loading)</li>
+<li class="fragment">Administração UFF</li>
+<li class="fragment">Mestrando PPGAd-UFF</li>
+</ul>
+</section>
 <section id="o-curso" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">O curso</h2>
 <p>Aula 1</p>
 <ul>
+<li class="fragment">Tipos de Gráficos por Tipo de Variável</li>
 <li class="fragment">Gráficos no R base, plot, hist, boxplot</li>
+<li class="fragment">Exercícios de fixação</li>
 <li class="fragment">gramática dos gráficos e ggplot2
 <ul>
 <li class="fragment">cores, formas, tamanhos</li>
-<li class="fragment">Facets</li>
-<li class="fragment">Rótulos, títulos e temas</li>
 </ul></li>
 <li class="fragment">Escalas Logarítmicas e Lineares</li>
-<li class="fragment">Tipos de Gráficos por Tipo de Variável</li>
+<li class="fragment"></li>
 <li class="fragment">EDA com o pacote esquisse</li>
 <li class="fragment">Exercícios de fixação</li>
 <li class="fragment">Tarefa com nota</li>
 </ul>
+</section>
+<section id="tipos-de-variáveis" class="slide level2">
+<h2>Tipos de variáveis</h2>
+<ul>
+<li class="fragment">Variáveis categóricas - Representam categorias ou grupos
+<ul>
+<li class="fragment">Nominais - Não possuem ordem Exemplo: sexo, cor dos olhos</li>
+<li class="fragment">Ordinais - Possuem ordem Exemplo: escolaridade, estado civil</li>
+</ul></li>
+<li class="fragment">Variáveis contínuas - Representam valores numéricos
+<ul>
+<li class="fragment">Discretas - Valores inteiros Exemplo: número de filhos, número de carros, número de acessos</li>
+<li class="fragment">Contínuas - Valores reais Exemplo: peso, altura, salário, etc.</li>
+</ul></li>
+</ul>
+</section>
+<section id="tipo-de-gráficos-por-tipo-de-variável" class="slide level2">
+<h2>Tipo de Gráficos por Tipo de Variável</h2>
+<ul>
+<li class="fragment">Variáveis categóricas
+<ul>
+<li class="fragment">barras</li>
+<li class="fragment">setor</li>
+<li class="fragment">etc…</li>
+</ul></li>
+<li class="fragment">Variáveis contínuas
+<ul>
+<li class="fragment">Histograma</li>
+<li class="fragment">boxplot</li>
+<li class="fragment">Gráfico de dispersão</li>
+<li class="fragment">etc…</li>
+</ul></li>
+</ul>
+</section>
+<section id="um-gráfico-para-cada-tipo-de-variável" class="slide level2">
+<h2>Um gráfico para cada tipo de variável</h2>
+<p>Ferramentas úteis:</p>
+<iframe width="1120" height="500" src="https://www.data-to-viz.com/" title="Webpage example"></iframe>
 </section>
 <section id="gráficos-no-r-base---plot" class="slide level2">
 <h2>Gráficos no R base - plot</h2>
@@ -440,9 +489,12 @@ Marcus Ramalho
 <span id="cb1-12"><a href=""></a>    <span class="at">title =</span> <span class="st">"Espécies"</span>,</span>
 <span id="cb1-13"><a href=""></a>    <span class="at">bg =</span> <span class="st">"lightgray"</span></span>
 <span id="cb1-14"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
 </div>
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+</section>
+<section id="gráficos-no-r-base---plot-1" class="slide level2">
+<h2>Gráficos no R base - plot</h2>
+
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
 <section id="gráficos-no-r-base---hist" class="slide level2">
 <h2>Gráficos no R base - hist</h2>
 <div class="cell">
@@ -455,7 +507,7 @@ Marcus Ramalho
 <span id="cb2-7"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
 <section id="gráficos-no-r-base---boxplot" class="slide level2">
 <h2>Gráficos no R base - boxplot</h2>
 <div class="cell">
@@ -468,7 +520,7 @@ Marcus Ramalho
 <span id="cb3-7"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
 <section id="gráficos-no-r-base---barplot" class="slide level2">
 <h2>Gráficos no R base - barplot</h2>
 <div class="cell">
@@ -481,7 +533,7 @@ Marcus Ramalho
 <span id="cb4-7"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
 <section id="gráficos-no-r-base---pie" class="slide level2">
 <h2>Gráficos no R base - pie</h2>
 <div class="cell">
@@ -492,7 +544,21 @@ Marcus Ramalho
 <span id="cb5-5"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="exercícios-de-fixação-1" class="slide level2">
+<h2>Exercícios de fixação 1</h2>
+<p>Use o conjunto de dados ‘dados_atmosfera’ do pacote ‘dados’ para responder as questões a seguir.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"dados"</span>)</span>
+<span id="cb6-2"><a href=""></a><span class="fu">library</span>(dados)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div>
+<ol type="a">
+<li><p>No DataFrame dados_atmosfera, identifique duas variáveis categóricas. Liste cinco exemplos de valores únicos para uma das variáveis categóricas.</p></li>
+<li><p>Escolha uma variável contínua (por exemplo, “temperatura”) e gere um histograma para visualizar a distribuição dessa variável.</p></li>
+</ol>
+</div>
+</section>
 <section id="gramática-dos-gráficos-e-ggplot2" class="slide level2">
 <h2>Gramática dos gráficos e ggplot2</h2>
 <p>O que é a gramática dos gráficos?</p>
@@ -504,94 +570,119 @@ Marcus Ramalho
 <section id="ggplot2---exemplo" class="slide level2">
 <h2>ggplot2 - Exemplo</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span></span>
-<span id="cb6-2"><a href=""></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb6-3"><a href=""></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Comprimento x Largura da Sépala"</span>, <span class="at">x =</span> <span class="st">"Comprimento"</span>, <span class="at">y =</span> <span class="st">"Largura"</span>) <span class="sc">+</span></span>
-<span id="cb6-4"><a href=""></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span></span>
+<span id="cb7-2"><a href=""></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb7-3"><a href=""></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Comprimento x Largura da Sépala"</span>, <span class="at">x =</span> <span class="st">"Comprimento"</span>, <span class="at">y =</span> <span class="st">"Largura"</span>) <span class="sc">+</span></span>
+<span id="cb7-4"><a href=""></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="camadas" class="slide level2">
+<h2>Camadas</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">ggplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
 <section id="ggplot2---elementos-da-gramática" class="slide level2">
 <h2>ggplot2 - Elementos da gramática</h2>
 
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
 <section id="ggplot2---elementos-da-gramática-1" class="slide level2">
 <h2>ggplot2 - Elementos da gramática</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="co"># Dados: Este é o conjunto de dados que queremos visualizar.</span></span>
-<span id="cb7-2"><a href=""></a>data <span class="ot">&lt;-</span> mtcars</span>
-<span id="cb7-3"><a href=""></a></span>
-<span id="cb7-4"><a href=""></a><span class="co"># Aesthetics: Mapeia variáveis nos dados para aspectos visuais do gráfico.</span></span>
-<span id="cb7-5"><a href=""></a>aes <span class="ot">&lt;-</span> <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> hp)</span>
-<span id="cb7-6"><a href=""></a></span>
-<span id="cb7-7"><a href=""></a><span class="co"># Geometrias: Descreve o tipo de gráfico que queremos criar.</span></span>
-<span id="cb7-8"><a href=""></a>geom <span class="ot">&lt;-</span> <span class="fu">geom_point</span>()</span>
-<span id="cb7-9"><a href=""></a></span>
-<span id="cb7-10"><a href=""></a><span class="co"># Escalas: Controla como os dados são mapeados para os aspectos visuais do gráfico.</span></span>
-<span id="cb7-11"><a href=""></a>scale <span class="ot">&lt;-</span> <span class="fu">scale_y_log10</span>()</span>
-<span id="cb7-12"><a href=""></a></span>
-<span id="cb7-13"><a href=""></a><span class="co"># Facets: Permite criar múltiplos gráficos pequenos, cada um mostrando um subconjunto dos dados.</span></span>
-<span id="cb7-14"><a href=""></a>facet <span class="ot">&lt;-</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>cyl)</span>
-<span id="cb7-15"><a href=""></a></span>
-<span id="cb7-16"><a href=""></a><span class="co"># Estatísticas: Realiza cálculos nos dados.</span></span>
-<span id="cb7-17"><a href=""></a>stat <span class="ot">&lt;-</span> <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"point"</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">3</span>)</span>
-<span id="cb7-18"><a href=""></a></span>
-<span id="cb7-19"><a href=""></a><span class="co"># Coordenadas: Define o sistema de coordenadas do gráfico.</span></span>
-<span id="cb7-20"><a href=""></a></span>
-<span id="cb7-21"><a href=""></a><span class="co"># Tema: Controla a aparência não-dados do gráfico, como a cor de fundo e a fonte do texto.</span></span>
-<span id="cb7-22"><a href=""></a>theme <span class="ot">&lt;-</span> <span class="fu">theme_minimal</span>()</span>
-<span id="cb7-23"><a href=""></a></span>
-<span id="cb7-24"><a href=""></a><span class="co"># Títulos e legendas</span></span>
-<span id="cb7-25"><a href=""></a>labels <span class="ot">&lt;-</span> <span class="fu">labs</span>(</span>
-<span id="cb7-26"><a href=""></a>    <span class="at">title =</span> <span class="st">"Relação entre MPG e HP"</span>,</span>
-<span id="cb7-27"><a href=""></a>    <span class="at">x =</span> <span class="st">"MPG"</span>,</span>
-<span id="cb7-28"><a href=""></a>    <span class="at">y =</span> <span class="st">"HP (escala logarítmica)"</span>,</span>
-<span id="cb7-29"><a href=""></a>    <span class="at">color =</span> <span class="st">"Número de cilindros"</span></span>
-<span id="cb7-30"><a href=""></a>)</span>
-<span id="cb7-31"><a href=""></a></span>
-<span id="cb7-32"><a href=""></a><span class="co"># Criar o gráfico</span></span>
-<span id="cb7-33"><a href=""></a><span class="fu">ggplot</span>(data, aes) <span class="sc">+</span> geom <span class="sc">+</span> scale <span class="sc">+</span> facet <span class="sc">+</span> stat <span class="sc">+</span> theme <span class="sc">+</span> labels</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="co"># Dados: Este é o conjunto de dados que queremos visualizar.</span></span>
+<span id="cb9-2"><a href=""></a>data <span class="ot">&lt;-</span> mtcars</span>
+<span id="cb9-3"><a href=""></a></span>
+<span id="cb9-4"><a href=""></a><span class="co"># Aesthetics: Mapeia variáveis nos dados para aspectos visuais do gráfico.</span></span>
+<span id="cb9-5"><a href=""></a>aes <span class="ot">&lt;-</span> <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> hp)</span>
+<span id="cb9-6"><a href=""></a></span>
+<span id="cb9-7"><a href=""></a><span class="co"># Geometrias: Descreve o tipo de gráfico que queremos criar.</span></span>
+<span id="cb9-8"><a href=""></a>geom <span class="ot">&lt;-</span> <span class="fu">geom_point</span>()</span>
+<span id="cb9-9"><a href=""></a></span>
+<span id="cb9-10"><a href=""></a><span class="co"># Escalas: Controla como os dados são mapeados para os aspectos visuais do gráfico.</span></span>
+<span id="cb9-11"><a href=""></a>scale <span class="ot">&lt;-</span> <span class="fu">scale_y_log10</span>()</span>
+<span id="cb9-12"><a href=""></a></span>
+<span id="cb9-13"><a href=""></a><span class="co"># Facets: Permite criar múltiplos gráficos pequenos, cada um mostrando um subconjunto dos dados.</span></span>
+<span id="cb9-14"><a href=""></a>facet <span class="ot">&lt;-</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>cyl)</span>
+<span id="cb9-15"><a href=""></a></span>
+<span id="cb9-16"><a href=""></a><span class="co"># Estatísticas: Realiza cálculos nos dados.</span></span>
+<span id="cb9-17"><a href=""></a>stat <span class="ot">&lt;-</span> <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"point"</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">3</span>)</span>
+<span id="cb9-18"><a href=""></a></span>
+<span id="cb9-19"><a href=""></a><span class="co"># Coordenadas: Define o sistema de coordenadas do gráfico.</span></span>
+<span id="cb9-20"><a href=""></a></span>
+<span id="cb9-21"><a href=""></a><span class="co"># Tema: Controla a aparência não-dados do gráfico, como a cor de fundo e a fonte do texto.</span></span>
+<span id="cb9-22"><a href=""></a>theme <span class="ot">&lt;-</span> <span class="fu">theme_minimal</span>()</span>
+<span id="cb9-23"><a href=""></a></span>
+<span id="cb9-24"><a href=""></a><span class="co"># Títulos e legendas</span></span>
+<span id="cb9-25"><a href=""></a>labels <span class="ot">&lt;-</span> <span class="fu">labs</span>(</span>
+<span id="cb9-26"><a href=""></a>    <span class="at">title =</span> <span class="st">"Relação entre MPG e HP"</span>,</span>
+<span id="cb9-27"><a href=""></a>    <span class="at">x =</span> <span class="st">"MPG"</span>,</span>
+<span id="cb9-28"><a href=""></a>    <span class="at">y =</span> <span class="st">"HP (escala logarítmica)"</span>,</span>
+<span id="cb9-29"><a href=""></a>    <span class="at">color =</span> <span class="st">"Número de cilindros"</span></span>
+<span id="cb9-30"><a href=""></a>)</span>
+<span id="cb9-31"><a href=""></a></span>
+<span id="cb9-32"><a href=""></a><span class="co"># Criar o gráfico</span></span>
+<span id="cb9-33"><a href=""></a><span class="fu">ggplot</span>(data, aes) <span class="sc">+</span> geom <span class="sc">+</span> scale <span class="sc">+</span> facet <span class="sc">+</span> stat <span class="sc">+</span> theme <span class="sc">+</span> labels</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="ggplot2---elementos-da-gramática-2" class="slide level2">
 <h2>ggplot2 - Elementos da gramática</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="co"># Criar o gráfico</span></span>
-<span id="cb8-2"><a href=""></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> hp)) <span class="sc">+</span></span>
-<span id="cb8-3"><a href=""></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb8-4"><a href=""></a>    <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb8-5"><a href=""></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>cyl) <span class="sc">+</span></span>
-<span id="cb8-6"><a href=""></a>    <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"point"</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb8-7"><a href=""></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb8-8"><a href=""></a>    <span class="fu">labs</span>(</span>
-<span id="cb8-9"><a href=""></a>        <span class="at">title =</span> <span class="st">"Relação entre MPG e HP"</span>,</span>
-<span id="cb8-10"><a href=""></a>        <span class="at">x =</span> <span class="st">"MPG"</span>,</span>
-<span id="cb8-11"><a href=""></a>        <span class="at">y =</span> <span class="st">"HP (escala logarítmica)"</span>,</span>
-<span id="cb8-12"><a href=""></a>        <span class="at">color =</span> <span class="st">"Número de cilindros"</span></span>
-<span id="cb8-13"><a href=""></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="co"># Criar o gráfico</span></span>
+<span id="cb10-2"><a href=""></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> hp)) <span class="sc">+</span></span>
+<span id="cb10-3"><a href=""></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb10-4"><a href=""></a>    <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb10-5"><a href=""></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>cyl) <span class="sc">+</span></span>
+<span id="cb10-6"><a href=""></a>    <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"point"</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb10-7"><a href=""></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb10-8"><a href=""></a>    <span class="fu">labs</span>(</span>
+<span id="cb10-9"><a href=""></a>        <span class="at">title =</span> <span class="st">"Relação entre MPG e HP"</span>,</span>
+<span id="cb10-10"><a href=""></a>        <span class="at">x =</span> <span class="st">"MPG"</span>,</span>
+<span id="cb10-11"><a href=""></a>        <span class="at">y =</span> <span class="st">"HP (escala logarítmica)"</span>,</span>
+<span id="cb10-12"><a href=""></a>        <span class="at">color =</span> <span class="st">"Número de cilindros"</span></span>
+<span id="cb10-13"><a href=""></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="escalas-contínuas-e-discretas" class="slide level2">
-<h2>Escalas contínuas e discretas</h2>
-<p>As escalas controlam a forma como os dados são mapeados para os aspectos visuais do gráfico.</p>
+<section id="gramática-dos-gráficos-e-ggplot2---cores" class="slide level2">
+<h2>Gramática dos gráficos e ggplot2 - cores</h2>
 
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
-<section id="escalas-contínuas-e-discretas-1" class="slide level2">
-<h2>Escalas contínuas e discretas</h2>
-</section>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+<section id="gramática-dos-gráficos-e-ggplot2---formas" class="slide level2">
+<h2>Gramática dos gráficos e ggplot2 - formas</h2>
+<p>Exemplo</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> hp, <span class="at">shape =</span> <span class="fu">factor</span>(cyl))) <span class="sc">+</span></span>
+<span id="cb11-2"><a href=""></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb11-3"><a href=""></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Relação entre MPG e HP"</span>, <span class="at">x =</span> <span class="st">"MPG"</span>, <span class="at">y =</span> <span class="st">"HP"</span>) <span class="sc">+</span></span>
+<span id="cb11-4"><a href=""></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<section id="gramática-dos-gráficos-e-ggplot2---tamanhos" class="slide level2">
+<h2>Gramática dos gráficos e ggplot2 - tamanhos</h2>
+<p>Exemplo</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> hp, <span class="at">size =</span> wt)) <span class="sc">+</span></span>
+<span id="cb12-2"><a href=""></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb12-3"><a href=""></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Relação entre MPG e HP"</span>, <span class="at">x =</span> <span class="st">"MPG"</span>, <span class="at">y =</span> <span class="st">"HP"</span>) <span class="sc">+</span></span>
+<span id="cb12-4"><a href=""></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
 <section id="escalas-lineares-e-logarítmicas" class="slide level2">
 <h2>Escalas Lineares e Logarítmicas</h2>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">100</span>, <span class="dv">1</span>)</span>
-<span id="cb9-2"><a href=""></a>y <span class="ot">&lt;-</span> x<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb9-3"><a href=""></a></span>
-<span id="cb9-4"><a href=""></a><span class="fu">plot</span>(x, y, <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">xlab =</span> <span class="st">"X"</span>, <span class="at">ylab =</span> <span class="st">"Y"</span>, <span class="at">main =</span> <span class="st">"Gráfico com Escala Linear"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">100</span>, <span class="dv">1</span>)</span>
+<span id="cb13-2"><a href=""></a>y <span class="ot">&lt;-</span> x<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb13-3"><a href=""></a></span>
+<span id="cb13-4"><a href=""></a><span class="fu">plot</span>(x, y, <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">xlab =</span> <span class="st">"X"</span>, <span class="at">ylab =</span> <span class="st">"Y"</span>, <span class="at">main =</span> <span class="st">"Gráfico com Escala Linear"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+<p><img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -608,56 +699,47 @@ Marcus Ramalho
 </section>
 <section id="escalas-lineares-e-logarítmicas-1" class="slide level2">
 <h2>Escalas Lineares e Logarítmicas</h2>
-<p>:::{layout-ncol=2}</p>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a><span class="co"># Dados</span></span>
+<span id="cb14-2"><a href=""></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">100</span>, <span class="dv">1</span>)</span>
+<span id="cb14-3"><a href=""></a>y <span class="ot">&lt;-</span> <span class="fu">exp</span>(x)</span>
+<span id="cb14-4"><a href=""></a></span>
+<span id="cb14-5"><a href=""></a><span class="co"># Gráfico com escala logarítmica no eixo y</span></span>
+<span id="cb14-6"><a href=""></a><span class="fu">plot</span>(x, y,</span>
+<span id="cb14-7"><a href=""></a>    <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lwd =</span> <span class="dv">2</span>,</span>
+<span id="cb14-8"><a href=""></a>    <span class="at">xlab =</span> <span class="st">"X"</span>, <span class="at">ylab =</span> <span class="st">"Y (log scale)"</span>,</span>
+<span id="cb14-9"><a href=""></a>    <span class="at">main =</span> <span class="st">"Gráfico com Escala Logarítmica"</span>,</span>
+<span id="cb14-10"><a href=""></a>    <span class="at">log =</span> <span class="st">"y"</span></span>
+<span id="cb14-11"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p>Exemplo de gráfico com escala logarítmica</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="co"># Dados</span></span>
-<span id="cb10-2"><a href=""></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">100</span>, <span class="dv">1</span>)</span>
-<span id="cb10-3"><a href=""></a>y <span class="ot">&lt;-</span> <span class="fu">exp</span>(x)</span>
-<span id="cb10-4"><a href=""></a></span>
-<span id="cb10-5"><a href=""></a><span class="co"># Gráfico com escala logarítmica no eixo y</span></span>
-<span id="cb10-6"><a href=""></a><span class="fu">plot</span>(x, y,</span>
-<span id="cb10-7"><a href=""></a>    <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lwd =</span> <span class="dv">2</span>,</span>
-<span id="cb10-8"><a href=""></a>    <span class="at">xlab =</span> <span class="st">"X"</span>, <span class="at">ylab =</span> <span class="st">"Y (log scale)"</span>,</span>
-<span id="cb10-9"><a href=""></a>    <span class="at">main =</span> <span class="st">"Gráfico com Escala Logarítmica"</span>,</span>
-<span id="cb10-10"><a href=""></a>    <span class="at">log =</span> <span class="st">"y"</span></span>
-<span id="cb10-11"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
 </div>
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
-<section id="tipo-de-gráficos-por-tipo-de-variável" class="slide level2">
-<h2>Tipo de Gráficos por Tipo de Variável</h2>
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
-<li class="fragment">Variáveis categóricas
-<ul>
-<li class="fragment">barras</li>
-<li class="fragment">setor</li>
-<li class="fragment">etc…</li>
-</ul></li>
-<li class="fragment">Variáveis numéricas
-<ul>
-<li class="fragment">Histograma</li>
-<li class="fragment">boxplot</li>
-<li class="fragment">Gráfico de dispersão</li>
-<li class="fragment">etc…</li>
-</ul></li>
+<li class="fragment">Escalas logarítmicas são usadas quando os dados variam de forma exponencial</li>
+<li class="fragment"></li>
 </ul>
-</section>
-<section id="tipo-de-gráficos-por-tipo-de-variável-1" class="slide level2">
-<h2>Tipo de Gráficos por Tipo de Variável</h2>
-<p>Ferramentas úteis:</p>
-<iframe width="1120" height="500" src="https://www.data-to-viz.com/" title="Webpage example"></iframe>
-</section>
-<section id="gramática-dos-gráficos-e-ggplot2---cores" class="slide level2">
-<h2>Gramática dos gráficos e ggplot2 - cores</h2>
-<p>Exemplo do uso das cores em um gráfico do ggplot2</p>
-
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"><div class="quarto-auto-generated-content">
+</div>
+</div>
+</div>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>Universidade Federal Fluminense - Programa de formação de executivos - Ciência de dados</p>
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

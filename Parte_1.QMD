@@ -16,20 +16,44 @@ footer: Universidade Federal Fluminense - Programa de formação de executivos -
 library(tidyverse)
 ```
 
+# Marcus Ramalho
+
+-   Pesquiso FII's/PKM/Web3.0 com ciência de dados
+-   Matlab/Fortran/Pascal/VBA/AutoLISP(LISP)/PHP/HTML/\
+    M(power query)/TypeScript/Python/R❤️e Rust(loading)
+-   Administração UFF
+-   Mestrando PPGAd-UFF
+
+
 ## O curso {auto-animate=true}
 
 Aula 1
 
 -   Tipos de Gráficos por Tipo de Variável
 -   Gráficos no R base, plot, hist, boxplot
+-   Exercícios de fixação
 -   gramática dos gráficos e ggplot2
     -   cores, formas, tamanhos
-    -   Facets
-    -   Rótulos, títulos e temas
 -   Escalas Logarítmicas e Lineares
+-   
 -   EDA com o pacote esquisse
 -   Exercícios de fixação
 -   Tarefa com nota
+
+## Tipos de variáveis
+
+-   Variáveis categóricas - Representam categorias ou grupos
+    -  Nominais - Não possuem ordem
+        Exemplo: sexo, cor dos olhos
+    -  Ordinais - Possuem ordem
+        Exemplo: escolaridade, estado civil
+
+-   Variáveis contínuas - Representam valores numéricos
+    -  Discretas - Valores inteiros
+        Exemplo: número de filhos, número de carros, número de acessos
+    -  Contínuas - Valores reais
+        Exemplo: peso, altura, salário, etc.
+
 
 ## Tipo de Gráficos por Tipo de Variável
 
@@ -43,7 +67,7 @@ Aula 1
     -   Gráfico de dispersão
     -   etc...
   
-## Tipo de Gráficos por Tipo de Variável
+## Um gráfico para cada tipo de variável
 
 Ferramentas úteis: 
 
@@ -55,6 +79,27 @@ Ferramentas úteis:
 
 ```{r}
 #| echo: true
+#| eval: false
+plot(iris$Sepal.Length, iris$Sepal.Width,
+    col = iris$Species, pch = 19,
+    xlab = "Comprimento", ylab = "Largura", main = "Comprimento x Largura da Sépala"
+)
+
+# Legenda
+legend(
+    "topright",
+    legend = levels(iris$Species),
+    col = c("black", "red", "green"),
+    pch = 19,
+    title = "Espécies",
+    bg = "lightgray"
+)
+```
+
+## Gráficos no R base - plot
+
+```{r}
+#| echo: false
 
 plot(iris$Sepal.Length, iris$Sepal.Width,
     col = iris$Species, pch = 19,
@@ -123,6 +168,25 @@ pie(table(iris$Species),
     border = "black"
 )
 ```
+
+## Exercícios de fixação 1 
+
+Use o conjunto de dados 'dados_atmosfera' do pacote 'dados' para responder as questões a seguir.
+
+```{r}
+#| echo: true
+#| eval: false
+install.packages("dados")
+library(dados)
+```
+
+:::{.nonincremental}
+
+(a) No DataFrame dados_atmosfera, identifique duas variáveis categóricas. Liste cinco exemplos de valores únicos para uma das variáveis categóricas.
+
+(b) Escolha uma variável contínua  (por exemplo, "temperatura") e gere um histograma para visualizar a distribuição dessa variável.
+
+:::
 
 ## Gramática dos gráficos e ggplot2
 
@@ -258,45 +322,49 @@ ggplot(mtcars, aes(x = mpg, y = hp)) +
 
 ```
 
-## Escalas contínuas e discretas
 
-As escalas controlam a forma como os dados são mapeados para os aspectos visuais do gráfico. 
+
+## Gramática dos gráficos e ggplot2 - cores
+
 
 ```{r}
-url <- "https://tinyurl.com/mtktm8e5"
-insurance <- read.csv(url)
-# modify the x and y axes and specify the colors to be used
-ggplot(
-    data = insurance,
-    mapping = aes(
-        x = age,
-        y = expenses,
-        color = smoker
-    )
-) +
-    geom_point(
-        alpha = .5,
-        size = 2
-    ) +
-    geom_smooth(
-        method = "lm",
-        se = FALSE,
-        size = 1.5
-    ) +
-    scale_x_continuous(breaks = seq(0, 70, 10)) +
-    scale_y_continuous(
-        breaks = seq(0, 60000, 20000),
-        label = scales::dollar
-    ) +
-    scale_color_manual(values = c(
-        "indianred3",
-        "cornflowerblue"
-    ))
+
+
+ggplot(data, aes(x = mpg, y = hp, color = factor(cyl))) +
+    geom_point() +
+    labs(title = "Relação entre MPG e HP", x = "MPG", y = "HP") +
+    theme_minimal()
+
 ```
 
-## Escalas contínuas e discretas
+## Gramática dos gráficos e ggplot2 - formas
+
+Exemplo
+
+```{r}
+#| echo: true
 
 
+ggplot(data, aes(x = mpg, y = hp, shape = factor(cyl))) +
+    geom_point() +
+    labs(title = "Relação entre MPG e HP", x = "MPG", y = "HP") +
+    theme_minimal()
+
+```
+
+## Gramática dos gráficos e ggplot2 - tamanhos
+
+Exemplo
+
+```{r}
+#| echo: true
+
+ggplot(data, aes(x = mpg, y = hp, size = wt)) +
+    geom_point() +
+    labs(title = "Relação entre MPG e HP", x = "MPG", y = "HP") +
+    theme_minimal()
+
+```
 
 ## Escalas Lineares e Logarítmicas
 
@@ -339,41 +407,6 @@ plot(x, y,
 )
 ```
 
-
-
-## Gramática dos gráficos e ggplot2 - cores
-
-
-```{r}
-
-# Dados
-data <- mtcars
-
-# Criar o gráfico
-
-ggplot(data, aes(x = mpg, y = hp, color = factor(cyl))) +
-    geom_point() +
-    labs(title = "Relação entre MPG e HP", x = "MPG", y = "HP") +
-    theme_minimal()
-
-```
-
-## Gramática dos gráficos e ggplot2 - formas
-
-Exemplo
-
-```{r}
-#| echo: true
-
-# Dados
-
-data <- mtcars
-
-# Criar o gráfico
-
-ggplot(data, aes(x = mpg, y = hp, shape = factor(cyl))) +
-    geom_point() +
-    labs(title = "Relação entre MPG e HP", x = "MPG", y = "HP") +
-    theme_minimal()
-
-```
+-  Escalas logarítmicas são usadas quando os dados variam de forma exponencial
+-  
+:::
