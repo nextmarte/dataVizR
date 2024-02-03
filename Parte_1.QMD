@@ -169,9 +169,13 @@ pie(table(iris$Species),
 )
 ```
 
+
+
 ## Exercícios de fixação 1 
 
-Use o conjunto de dados 'dados_atmosfera' do pacote 'dados' para responder as questões a seguir.
+:::{.nonincremental}
+
+Use o conjunto de dados 'casas' do pacote 'dados' para responder as questões a seguir.
 
 ```{r}
 #| echo: true
@@ -180,13 +184,136 @@ install.packages("dados")
 library(dados)
 ```
 
-:::{.nonincremental}
 
-(a) No DataFrame dados_atmosfera, identifique duas variáveis categóricas. Liste cinco exemplos de valores únicos para uma das variáveis categóricas.
 
-(b) Escolha uma variável contínua  (por exemplo, "temperatura") e gere um histograma para visualizar a distribuição dessa variável.
+a. Identifique duas variáveis categóricas. Liste cinco exemplos de valores únicos para uma das variáveis categóricas.
+
+b. Utilizando o pacote de gráficos base do R, escolha uma variável contínua e gere um histograma para visualizar a distribuição. Explique o que você observa no gráfico.
 
 :::
+
+
+## Exercícios de fixação 2
+
+:::{.nonincremental}
+
+Use o conjunto de dados 'dados_atmosfera' do pacote 'dados' para responder as questões a seguir.
+
+a. Utilizando o pacote de gráficos base do R, crie um gráfico de barras para representar a distribuição da variável categórica "nuvem_baixa". Adicione rótulos aos eixos.
+
+b. Crie um gráfico de dispersão para visualizar a relação entre as variáveis contínuas "temp_superficie" e "pressao". Adicione rótulos aos eixos x e y, e destaque cores diferentes para cada ano (utilizando a variável categórica "ano").
+
+:::
+
+## Exercícios de fixação 1 a - Resposta
+
+Identificando todas as variáveis não numéricas do conjunto de dados
+
+```{r}
+#| echo: true
+
+# Carregar o pacote
+library(dados)
+
+casas %>%
+    select_if(~ is.character(.)) %>%
+    names(.)
+
+
+
+```
+
+## Exercícios de fixação 1 a - Resposta
+
+Listando cinco exemplos de valores únicos para a variável categórica "vizinhanca"
+
+```{r}
+#| echo: true
+
+casas %>%
+    count(vizinhanca) %>%
+    head(5)
+
+```
+
+## Exercícios de fixação 1 b - Resposta
+
+Criando um histograma para a variável contínua "area_construida"
+
+```{r}
+#| echo: true
+#| eval: false
+
+# Criar o gráfico
+hist(casas$garagem_area,
+    xlab = "Área da Garagem",
+    ylab = "Frequência",
+    main = "Histograma da Área da Garagem",
+    col = "lightblue",
+    border = "lightblue"
+)
+```
+
+## Exercícios de fixação 1 b - Resposta
+
+```{r}
+#| echo: false
+
+# Criar o gráfico
+hist(casas$garagem_area,
+    xlab = "Área da Garagem",
+    ylab = "Frequência",
+    main = "Histograma da Área da Garagem",
+    col = "lightblue",
+    border = "lightblue"
+)
+```
+
+## Exercícios de fixação 2 - Resposta
+
+Criando um gráfico de barras para a variável categórica "nuvem_baixa"  
+
+```{r}
+
+#| echo: true
+
+barplot(table(dados_atmosfera$nuvem_baixa),
+    xlab = "Nuvem Baixa",
+    ylab = "Contagem",
+    main = "Distribuição de Nuvem Baixa",
+    col = "lightblue",
+    border = "black"
+)
+
+```
+
+## Exercícios de fixação 2 - Resposta
+
+Criando um gráfico de dispersão para as variáveis contínuas "temp_superficie" e "pressao"
+
+```{r}
+
+#| echo: true
+
+# Criar o gráfico
+plot(dados_atmosfera$temp_superficie, dados_atmosfera$pressao,
+    col = as.numeric(dados_atmosfera$ano), pch = 19,
+    xlab = "Temperatura da Superfície",
+    ylab = "Pressão",
+    main = "Relação entre Temperatura da Superfície e Pressão"
+)
+
+# Adicionar a legenda
+legend(
+    "topright",
+    legend = unique(dados_atmosfera$ano),
+    col = unique(as.numeric(dados_atmosfera$ano)),
+    pch = 19,
+    title = "Ano",
+    bg = "lightgray"
+)
+
+```
 
 ## Gramática dos gráficos e ggplot2
 
