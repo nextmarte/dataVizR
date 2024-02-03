@@ -3,7 +3,7 @@ title: Visualização de dados com R
 subtitle: Aula 1 - Introdução a visualização de dados
 author: Marcus Ramalho
 format: 
-    revealjs: 
+    revealjs:
         incremental: true  
         transition: slide
         background-transition: fade
@@ -20,16 +20,36 @@ library(tidyverse)
 
 Aula 1
 
+-   Tipos de Gráficos por Tipo de Variável
 -   Gráficos no R base, plot, hist, boxplot
 -   gramática dos gráficos e ggplot2
     -   cores, formas, tamanhos
     -   Facets
     -   Rótulos, títulos e temas
 -   Escalas Logarítmicas e Lineares
--   Tipos de Gráficos por Tipo de Variável
 -   EDA com o pacote esquisse
 -   Exercícios de fixação
 -   Tarefa com nota
+
+## Tipo de Gráficos por Tipo de Variável
+
+-   Variáveis categóricas
+    -   barras
+    -   setor
+    -   etc...
+-   Variáveis contínuas
+    -   Histograma
+    -   boxplot
+    -   Gráfico de dispersão
+    -   etc...
+  
+## Tipo de Gráficos por Tipo de Variável
+
+Ferramentas úteis: 
+
+```{=html}
+<iframe width="1120" height="500" src="https://www.data-to-viz.com/" title="Webpage example"></iframe>
+```
 
 ## Gráficos no R base - plot
 
@@ -120,6 +140,16 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
     labs(title = "Comprimento x Largura da Sépala", x = "Comprimento", y = "Largura") +
     theme_minimal()
 ```
+
+## Camadas 
+
+```{r}
+#| echo: true
+
+ggplot()
+
+```
+
 
 ## ggplot2 - Elementos da gramática
 
@@ -309,23 +339,41 @@ plot(x, y,
 )
 ```
 
-## Tipo de Gráficos por Tipo de Variável
 
--   Variáveis categóricas
-    -   barras
-    -   setor
-    -   etc...
--   Variáveis numéricas
-    -   Histograma
-    -   boxplot
-    -   Gráfico de dispersão
-    -   etc...
-  
-## Tipo de Gráficos por Tipo de Variável
 
-Ferramentas úteis: 
+## Gramática dos gráficos e ggplot2 - cores
 
-```{=html}
-<iframe width="1120" height="500" src="https://www.data-to-viz.com/" title="Webpage example"></iframe>
+
+```{r}
+
+# Dados
+data <- mtcars
+
+# Criar o gráfico
+
+ggplot(data, aes(x = mpg, y = hp, color = factor(cyl))) +
+    geom_point() +
+    labs(title = "Relação entre MPG e HP", x = "MPG", y = "HP") +
+    theme_minimal()
+
 ```
 
+## Gramática dos gráficos e ggplot2 - formas
+
+Exemplo
+
+```{r}
+#| echo: true
+
+# Dados
+
+data <- mtcars
+
+# Criar o gráfico
+
+ggplot(data, aes(x = mpg, y = hp, shape = factor(cyl))) +
+    geom_point() +
+    labs(title = "Relação entre MPG e HP", x = "MPG", y = "HP") +
+    theme_minimal()
+
+```
