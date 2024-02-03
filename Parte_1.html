@@ -422,14 +422,14 @@ M(power query)/TypeScript/Python/R❤️e Rust(loading)</li>
 <ul>
 <li class="fragment">Tipos de Gráficos por Tipo de Variável</li>
 <li class="fragment">Gráficos no R base, plot, hist, boxplot</li>
-<li class="fragment">Exercícios de fixação</li>
+<li class="fragment">Exercícios de fixação 1</li>
 <li class="fragment">gramática dos gráficos e ggplot2
 <ul>
 <li class="fragment">cores, formas, tamanhos</li>
 </ul></li>
+<li class="fragment">Exercícios de fixação 2</li>
 <li class="fragment">Escalas Logarítmicas e Lineares</li>
-<li class="fragment"></li>
-<li class="fragment">EDA com o pacote esquisse</li>
+<li class="fragment">Exploração de dados com o pacote esquisse</li>
 <li class="fragment">Exercícios de fixação</li>
 <li class="fragment">Tarefa com nota</li>
 </ul>
@@ -547,8 +547,8 @@ M(power query)/TypeScript/Python/R❤️e Rust(loading)</li>
 <img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
 <section id="exercícios-de-fixação-1" class="slide level2">
 <h2>Exercícios de fixação 1</h2>
-<div>
-<p>Use o conjunto de dados ‘casas’ do pacote ‘dados’ para responder as questões a seguir.</p>
+<div style="font-size: 30px">
+<p>1 - Use o conjunto de dados ‘casas’ do pacote ‘dados’ para responder as questões a seguir.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"dados"</span>)</span>
 <span id="cb6-2"><a href=""></a><span class="fu">library</span>(dados)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -557,12 +557,7 @@ M(power query)/TypeScript/Python/R❤️e Rust(loading)</li>
 <li><p>Identifique duas variáveis categóricas. Liste cinco exemplos de valores únicos para uma das variáveis categóricas.</p></li>
 <li><p>Utilizando o pacote de gráficos base do R, escolha uma variável contínua e gere um histograma para visualizar a distribuição. Explique o que você observa no gráfico.</p></li>
 </ol>
-</div>
-</section>
-<section id="exercícios-de-fixação-2" class="slide level2">
-<h2>Exercícios de fixação 2</h2>
-<div>
-<p>Use o conjunto de dados ‘dados_atmosfera’ do pacote ‘dados’ para responder as questões a seguir.</p>
+<p>2 - Use o conjunto de dados ‘dados_atmosfera’ do pacote ‘dados’ para responder as questões a seguir.</p>
 <ol type="a">
 <li><p>Utilizando o pacote de gráficos base do R, crie um gráfico de barras para representar a distribuição da variável categórica “nuvem_baixa”. Adicione rótulos aos eixos.</p></li>
 <li><p>Crie um gráfico de dispersão para visualizar a relação entre as variáveis contínuas “temp_superficie” e “pressao”. Adicione rótulos aos eixos x e y, e destaque cores diferentes para cada ano (utilizando a variável categórica “ano”).</p></li>
@@ -644,13 +639,13 @@ M(power query)/TypeScript/Python/R❤️e Rust(loading)</li>
 <h2>Exercícios de fixação 1 b - Resposta</h2>
 
 <img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
-<section id="exercícios-de-fixação-2---resposta" class="slide level2">
-<h2>Exercícios de fixação 2 - Resposta</h2>
+<section id="exercícios-de-fixação-2-a---resposta" class="slide level2">
+<h2>Exercícios de fixação 2 a - Resposta</h2>
 <p>Criando um gráfico de barras para a variável categórica “nuvem_baixa”</p>
 
 <img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
-<section id="exercícios-de-fixação-2---resposta-1" class="slide level2">
-<h2>Exercícios de fixação 2 - Resposta</h2>
+<section id="exercícios-de-fixação-2-b---resposta" class="slide level2">
+<h2>Exercícios de fixação 2 b - Resposta</h2>
 <p>Criando um gráfico de dispersão para as variáveis contínuas “temp_superficie” e “pressao”</p>
 
 <img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
@@ -672,18 +667,18 @@ M(power query)/TypeScript/Python/R❤️e Rust(loading)</li>
 
 </div>
 <img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
-<section id="camadas" class="slide level2">
-<h2>Camadas</h2>
+<section id="ggplot2---elementos-da-gramática" class="slide level2">
+<h2>## ggplot2 - Elementos da gramática</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="fu">ggplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
-<section id="ggplot2---elementos-da-gramática" class="slide level2">
+<section id="ggplot2---elementos-da-gramática-1" class="slide level2">
 <h2>ggplot2 - Elementos da gramática</h2>
 
 <img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
-<section id="ggplot2---elementos-da-gramática-1" class="slide level2">
+<section id="ggplot2---elementos-da-gramática-2" class="slide level2">
 <h2>ggplot2 - Elementos da gramática</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a><span class="co"># Dados: Este é o conjunto de dados que queremos visualizar.</span></span>
@@ -698,37 +693,34 @@ M(power query)/TypeScript/Python/R❤️e Rust(loading)</li>
 <span id="cb14-10"><a href=""></a><span class="co"># Escalas: Controla como os dados são mapeados para os aspectos visuais do gráfico.</span></span>
 <span id="cb14-11"><a href=""></a>scale <span class="ot">&lt;-</span> <span class="fu">scale_y_log10</span>()</span>
 <span id="cb14-12"><a href=""></a></span>
-<span id="cb14-13"><a href=""></a><span class="co"># Facets: Permite criar múltiplos gráficos pequenos, cada um mostrando um subconjunto dos dados.</span></span>
-<span id="cb14-14"><a href=""></a>facet <span class="ot">&lt;-</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>cyl)</span>
+<span id="cb14-13"><a href=""></a><span class="co"># Estatísticas: Realiza cálculos nos dados.</span></span>
+<span id="cb14-14"><a href=""></a>stat <span class="ot">&lt;-</span> <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"point"</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">3</span>)</span>
 <span id="cb14-15"><a href=""></a></span>
-<span id="cb14-16"><a href=""></a><span class="co"># Estatísticas: Realiza cálculos nos dados.</span></span>
-<span id="cb14-17"><a href=""></a>stat <span class="ot">&lt;-</span> <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"point"</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">3</span>)</span>
-<span id="cb14-18"><a href=""></a></span>
-<span id="cb14-19"><a href=""></a><span class="co"># Coordenadas: Define o sistema de coordenadas do gráfico.</span></span>
+<span id="cb14-16"><a href=""></a><span class="co"># Coordenadas: Define o sistema de coordenadas do gráfico.</span></span>
+<span id="cb14-17"><a href=""></a></span>
+<span id="cb14-18"><a href=""></a><span class="co"># Tema: Controla a aparência não-dados do gráfico, como a cor de fundo e a fonte do texto.</span></span>
+<span id="cb14-19"><a href=""></a>theme <span class="ot">&lt;-</span> <span class="fu">theme_minimal</span>()</span>
 <span id="cb14-20"><a href=""></a></span>
-<span id="cb14-21"><a href=""></a><span class="co"># Tema: Controla a aparência não-dados do gráfico, como a cor de fundo e a fonte do texto.</span></span>
-<span id="cb14-22"><a href=""></a>theme <span class="ot">&lt;-</span> <span class="fu">theme_minimal</span>()</span>
-<span id="cb14-23"><a href=""></a></span>
-<span id="cb14-24"><a href=""></a><span class="co"># Títulos e legendas</span></span>
-<span id="cb14-25"><a href=""></a>labels <span class="ot">&lt;-</span> <span class="fu">labs</span>(</span>
-<span id="cb14-26"><a href=""></a>    <span class="at">title =</span> <span class="st">"Relação entre MPG e HP"</span>,</span>
-<span id="cb14-27"><a href=""></a>    <span class="at">x =</span> <span class="st">"MPG"</span>,</span>
-<span id="cb14-28"><a href=""></a>    <span class="at">y =</span> <span class="st">"HP (escala logarítmica)"</span>,</span>
-<span id="cb14-29"><a href=""></a>    <span class="at">color =</span> <span class="st">"Número de cilindros"</span></span>
-<span id="cb14-30"><a href=""></a>)</span>
-<span id="cb14-31"><a href=""></a></span>
-<span id="cb14-32"><a href=""></a><span class="co"># Criar o gráfico</span></span>
-<span id="cb14-33"><a href=""></a><span class="fu">ggplot</span>(data, aes) <span class="sc">+</span> geom <span class="sc">+</span> scale <span class="sc">+</span> facet <span class="sc">+</span> stat <span class="sc">+</span> theme <span class="sc">+</span> labels</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-21"><a href=""></a><span class="co"># Títulos e legendas</span></span>
+<span id="cb14-22"><a href=""></a>labels <span class="ot">&lt;-</span> <span class="fu">labs</span>(</span>
+<span id="cb14-23"><a href=""></a>    <span class="at">title =</span> <span class="st">"Relação entre MPG e HP"</span>,</span>
+<span id="cb14-24"><a href=""></a>    <span class="at">x =</span> <span class="st">"MPG"</span>,</span>
+<span id="cb14-25"><a href=""></a>    <span class="at">y =</span> <span class="st">"HP (escala logarítmica)"</span>,</span>
+<span id="cb14-26"><a href=""></a>    <span class="at">color =</span> <span class="st">"Número de cilindros"</span></span>
+<span id="cb14-27"><a href=""></a>)</span>
+<span id="cb14-28"><a href=""></a></span>
+<span id="cb14-29"><a href=""></a><span class="co"># Criar o gráfico</span></span>
+<span id="cb14-30"><a href=""></a><span class="fu">ggplot</span>(data, aes) <span class="sc">+</span> geom <span class="sc">+</span> scale <span class="sc">+</span> stat <span class="sc">+</span> theme <span class="sc">+</span> labels</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="ggplot2---elementos-da-gramática-2" class="slide level2">
+<section id="ggplot2---elementos-da-gramática-3" class="slide level2">
 <h2>ggplot2 - Elementos da gramática</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="co"># Criar o gráfico</span></span>
 <span id="cb15-2"><a href=""></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> hp)) <span class="sc">+</span></span>
 <span id="cb15-3"><a href=""></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb15-4"><a href=""></a>    <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb15-5"><a href=""></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>cyl) <span class="sc">+</span></span>
+<span id="cb15-5"><a href=""></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>am) <span class="sc">+</span> <span class="co"># cria uma faceta para cada valor único da variável am (transmissão manual ou automática)</span></span>
 <span id="cb15-6"><a href=""></a>    <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"point"</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
 <span id="cb15-7"><a href=""></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb15-8"><a href=""></a>    <span class="fu">labs</span>(</span>
@@ -741,19 +733,47 @@ M(power query)/TypeScript/Python/R❤️e Rust(loading)</li>
 </section>
 <section id="gramática-dos-gráficos-e-ggplot2---cores" class="slide level2">
 <h2>Gramática dos gráficos e ggplot2 - cores</h2>
+<p>O argumento color mapeia uma variável categórica para as cores dos pontos</p>
 
 <img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
+<section id="gramática-dos-gráficos-e-ggplot2---cores-1" class="slide level2">
+<h2>Gramática dos gráficos e ggplot2 - cores</h2>
+<p>Se quisermos definir uma cor especifica temos que tomar cuidado com a localização do argumento color, por exemplo, se quisermos que todos os pontos sejam vermelhos, devemos colocar o argumento color dentro da função geom_point mas fora da função aes. Mas se quisermos mapear uma variável contínua para as cores dos pontos, devemos colocar o argumento color dentro da função aes.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="gramática-dos-gráficos-e-ggplot2---fill" class="slide level2">
+<h2>Gramática dos gráficos e ggplot2 - fill</h2>
+<p>O argumento fill mapeia uma variável categórica para o preenchimento das barras, a diferença entre color e fill é que color mapeia para a cor da borda e fill mapeia para o preenchimento. Além disso,</p>
+
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
 <section id="gramática-dos-gráficos-e-ggplot2---formas" class="slide level2">
 <h2>Gramática dos gráficos e ggplot2 - formas</h2>
 <p>Exemplo</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> hp, <span class="at">shape =</span> <span class="fu">factor</span>(cyl))) <span class="sc">+</span></span>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> hp, <span class="at">shape =</span> <span class="fu">factor</span>(cyl), <span class="at">size =</span> <span class="dv">10</span>, <span class="at">color =</span> <span class="fu">as.factor</span>(cyl))) <span class="sc">+</span></span>
 <span id="cb16-2"><a href=""></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb16-3"><a href=""></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Relação entre MPG e HP"</span>, <span class="at">x =</span> <span class="st">"MPG"</span>, <span class="at">y =</span> <span class="st">"HP"</span>) <span class="sc">+</span></span>
 <span id="cb16-4"><a href=""></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-21-1.png" width="960" class="r-stretch"></section>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section>
 <section id="gramática-dos-gráficos-e-ggplot2---tamanhos" class="slide level2">
 <h2>Gramática dos gráficos e ggplot2 - tamanhos</h2>
 <p>Exemplo</p>
@@ -764,11 +784,15 @@ M(power query)/TypeScript/Python/R❤️e Rust(loading)</li>
 <span id="cb17-4"><a href=""></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section>
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section>
+<section id="exercícios-de-fixação-3" class="slide level2">
+<h2>Exercícios de fixação 3</h2>
+<p>Refaça os gráficos dos exercícios de fixação 1 e 2 utilizando o pacote ggplot2 e a gramática dos gráficos. Comente sobre as diferenças entre os gráficos gerados com o pacote base do R e com o pacote ggplot2.</p>
+</section>
 <section id="escalas-lineares-e-logarítmicas" class="slide level2">
 <h2>Escalas Lineares e Logarítmicas</h2>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href=""></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">100</span>, <span class="dv">1</span>)</span>
-<span id="cb18-2"><a href=""></a>y <span class="ot">&lt;-</span> x<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb18-2"><a href=""></a>y <span class="ot">&lt;-</span> x</span>
 <span id="cb18-3"><a href=""></a></span>
 <span id="cb18-4"><a href=""></a><span class="fu">plot</span>(x, y, <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">xlab =</span> <span class="st">"X"</span>, <span class="at">ylab =</span> <span class="st">"Y"</span>, <span class="at">main =</span> <span class="st">"Gráfico com Escala Linear"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
@@ -777,7 +801,7 @@ M(power query)/TypeScript/Python/R❤️e Rust(loading)</li>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
+<p><img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-26-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -807,27 +831,94 @@ M(power query)/TypeScript/Python/R❤️e Rust(loading)</li>
 <span id="cb19-11"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>Exemplo de gráfico com escala logarítmica</p>
-</div>
 <div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-24-1.png" width="960"></p>
+<p><img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
-</div>
-<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<ul>
-<li class="fragment">Escalas logarítmicas são usadas quando os dados variam de forma exponencial</li>
-<li class="fragment"></li>
-</ul>
+<p>Escalas logarítmicas são usadas quando os dados variam de forma exponencial</p>
 </div>
 </div>
+</div>
+</section>
+<section id="escalas-lineares-e-logarítmicas-2" class="slide level2">
+<h2>Escalas Lineares e Logarítmicas</h2>
+<p>Quando precisamos representar variáveis em escalas diferentes, podemos usar a função scale_x_log10() ou scale_y_log10() para poder visualizar os dados de forma mais clara. No exemplo abaixo queremos comparar duas regressões que tem ordem de grandeza diferente, para isso usamos a escala logarítmica no eixo y.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href=""></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">100</span>, <span class="dv">1</span>)</span>
+<span id="cb20-2"><a href=""></a></span>
+<span id="cb20-3"><a href=""></a>y1 <span class="ot">&lt;-</span> x</span>
+<span id="cb20-4"><a href=""></a></span>
+<span id="cb20-5"><a href=""></a>y2 <span class="ot">&lt;-</span> <span class="fu">exp</span>(x)</span>
+<span id="cb20-6"><a href=""></a></span>
+<span id="cb20-7"><a href=""></a><span class="co"># Gráfico com escala logarítmica no eixo y</span></span>
+<span id="cb20-8"><a href=""></a></span>
+<span id="cb20-9"><a href=""></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">rep</span>(x, <span class="dv">2</span>), <span class="at">y =</span> <span class="fu">c</span>(y1, y2), <span class="at">model =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"linear"</span>, <span class="st">"exponencial"</span>), <span class="at">each =</span> <span class="fu">length</span>(x)))</span>
+<span id="cb20-10"><a href=""></a></span>
+<span id="cb20-11"><a href=""></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> model)) <span class="sc">+</span></span>
+<span id="cb20-12"><a href=""></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb20-13"><a href=""></a>    <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb20-14"><a href=""></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Comparação entre Regressões"</span>, <span class="at">x =</span> <span class="st">"X"</span>, <span class="at">y =</span> <span class="st">"Y (log scale)"</span>) <span class="sc">+</span></span>
+<span id="cb20-15"><a href=""></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="escalas-lineares-e-logarítmicas-3" class="slide level2">
+<h2>Escalas Lineares e Logarítmicas</h2>
+
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section>
+<section id="escala-percentual" class="slide level2">
+<h2>Escala percentual</h2>
+<p>Usando o conjunto de dados casas, vamos criar um gráfico de barras para visualizar a distribuição da variável categórica “ano_construcao” e adicionar rótulos aos eixos de forma que a escala seja percentual.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a>casas <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a href=""></a>    <span class="fu">count</span>(funcional) <span class="sc">%&gt;%</span></span>
+<span id="cb21-3"><a href=""></a>    <span class="fu">mutate</span>(<span class="at">percentual =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)) <span class="sc">%&gt;%</span> <span class="co"># Calcula a frequência relativa</span></span>
+<span id="cb21-4"><a href=""></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(funcional, <span class="sc">-</span>percentual), <span class="at">y =</span> percentual)) <span class="sc">+</span> <span class="co"># Reordena as barras de acordo com a frequência relativa</span></span>
+<span id="cb21-5"><a href=""></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"lightblue"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb21-6"><a href=""></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribuição do Ano de Construção"</span>, <span class="at">x =</span> <span class="st">"Ano de Construção"</span>, <span class="at">y =</span> <span class="st">"Percentual"</span>) <span class="sc">+</span></span>
+<span id="cb21-7"><a href=""></a>    <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span> <span class="co"># Define a escala percentual no eixo y</span></span>
+<span id="cb21-8"><a href=""></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="escala-percentual-1" class="slide level2">
+<h2>Escala percentual</h2>
+
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"></section>
+<section id="escala-percentual-2" class="slide level2">
+<h2>Escala percentual</h2>
+<p>Também podemos adicionar rótulos para cada barra com a função geom_text</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href=""></a>casas <span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a href=""></a>    <span class="fu">count</span>(funcional) <span class="sc">%&gt;%</span></span>
+<span id="cb22-3"><a href=""></a>    <span class="fu">mutate</span>(<span class="at">percentual =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)) <span class="sc">%&gt;%</span></span>
+<span id="cb22-4"><a href=""></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(funcional, <span class="sc">-</span>percentual), <span class="at">y =</span> percentual)) <span class="sc">+</span></span>
+<span id="cb22-5"><a href=""></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"lightblue"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb22-6"><a href=""></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribuição do Ano de Construção"</span>, <span class="at">x =</span> <span class="st">"Ano de Construção"</span>, <span class="at">y =</span> <span class="st">"Percentual"</span>) <span class="sc">+</span></span>
+<span id="cb22-7"><a href=""></a>    <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span></span>
+<span id="cb22-8"><a href=""></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> scales<span class="sc">::</span><span class="fu">percent</span>(percentual)), <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>) <span class="sc">+</span> <span class="co"># Adiciona rótulos e ajusta a posição</span></span>
+<span id="cb22-9"><a href=""></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="escala-percentual-3" class="slide level2">
+<h2>Escala percentual</h2>
+
+<img data-src="Parte_1_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"></section>
+<section id="explorando-dados-com-o-pacote-esquisse" class="slide level2">
+<h2>Explorando dados com o pacote esquisse</h2>
+<p>O pacote esquisse é uma ferramenta interativa para explorar e visualizar dados. podemos usá-lo para criar gráficos rapidamente e explorar a relação entre variáveis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a><span class="co"># Instalar o pacote</span></span>
+<span id="cb23-2"><a href=""></a></span>
+<span id="cb23-3"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"esquisse"</span>)</span>
+<span id="cb23-4"><a href=""></a></span>
+<span id="cb23-5"><a href=""></a><span class="fu">library</span>(esquisse)</span>
+<span id="cb23-6"><a href=""></a></span>
+<span id="cb23-7"><a href=""></a>esquisse<span class="sc">::</span><span class="fu">esquisser</span>() <span class="co"># use :: para chamar a função esquisser do pacote esquisse sem precisar carregar o pacote inteiro</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

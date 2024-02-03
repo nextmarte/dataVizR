@@ -24,36 +24,29 @@ library(tidyverse)
 -   Administração UFF
 -   Mestrando PPGAd-UFF
 
-
-## O curso {auto-animate=true}
+## O curso {auto-animate="true"}
 
 Aula 1
 
 -   Tipos de Gráficos por Tipo de Variável
 -   Gráficos no R base, plot, hist, boxplot
--   Exercícios de fixação
+-   Exercícios de fixação 1
 -   gramática dos gráficos e ggplot2
     -   cores, formas, tamanhos
+-   Exercícios de fixação 2
 -   Escalas Logarítmicas e Lineares
--   
--   EDA com o pacote esquisse
+-   Exploração de dados com o pacote esquisse
 -   Exercícios de fixação
 -   Tarefa com nota
 
 ## Tipos de variáveis
 
 -   Variáveis categóricas - Representam categorias ou grupos
-    -  Nominais - Não possuem ordem
-        Exemplo: sexo, cor dos olhos
-    -  Ordinais - Possuem ordem
-        Exemplo: escolaridade, estado civil
-
+    -   Nominais - Não possuem ordem Exemplo: sexo, cor dos olhos
+    -   Ordinais - Possuem ordem Exemplo: escolaridade, estado civil
 -   Variáveis contínuas - Representam valores numéricos
-    -  Discretas - Valores inteiros
-        Exemplo: número de filhos, número de carros, número de acessos
-    -  Contínuas - Valores reais
-        Exemplo: peso, altura, salário, etc.
-
+    -   Discretas - Valores inteiros Exemplo: número de filhos, número de carros, número de acessos
+    -   Contínuas - Valores reais Exemplo: peso, altura, salário, etc.
 
 ## Tipo de Gráficos por Tipo de Variável
 
@@ -66,15 +59,14 @@ Aula 1
     -   boxplot
     -   Gráfico de dispersão
     -   etc...
-  
+
 ## Um gráfico para cada tipo de variável
 
-Ferramentas úteis: 
+Ferramentas úteis:
 
 ```{=html}
 <iframe width="1120" height="500" src="https://www.data-to-viz.com/" title="Webpage example"></iframe>
 ```
-
 ## Gráficos no R base - plot
 
 ```{r}
@@ -169,13 +161,10 @@ pie(table(iris$Species),
 )
 ```
 
+## Exercícios de fixação 1
 
-
-## Exercícios de fixação 1 
-
-:::{.nonincremental}
-
-Use o conjunto de dados 'casas' do pacote 'dados' para responder as questões a seguir.
+::: {.nonincremental style="font-size: 30px"}
+1 - Use o conjunto de dados 'casas' do pacote 'dados' para responder as questões a seguir.
 
 ```{r}
 #| echo: true
@@ -184,25 +173,15 @@ install.packages("dados")
 library(dados)
 ```
 
+a.  Identifique duas variáveis categóricas. Liste cinco exemplos de valores únicos para uma das variáveis categóricas.
 
+b.  Utilizando o pacote de gráficos base do R, escolha uma variável contínua e gere um histograma para visualizar a distribuição. Explique o que você observa no gráfico.
 
-a. Identifique duas variáveis categóricas. Liste cinco exemplos de valores únicos para uma das variáveis categóricas.
+2 - Use o conjunto de dados 'dados_atmosfera' do pacote 'dados' para responder as questões a seguir.
 
-b. Utilizando o pacote de gráficos base do R, escolha uma variável contínua e gere um histograma para visualizar a distribuição. Explique o que você observa no gráfico.
+a.  Utilizando o pacote de gráficos base do R, crie um gráfico de barras para representar a distribuição da variável categórica "nuvem_baixa". Adicione rótulos aos eixos.
 
-:::
-
-
-## Exercícios de fixação 2
-
-:::{.nonincremental}
-
-Use o conjunto de dados 'dados_atmosfera' do pacote 'dados' para responder as questões a seguir.
-
-a. Utilizando o pacote de gráficos base do R, crie um gráfico de barras para representar a distribuição da variável categórica "nuvem_baixa". Adicione rótulos aos eixos.
-
-b. Crie um gráfico de dispersão para visualizar a relação entre as variáveis contínuas "temp_superficie" e "pressao". Adicione rótulos aos eixos x e y, e destaque cores diferentes para cada ano (utilizando a variável categórica "ano").
-
+b.  Crie um gráfico de dispersão para visualizar a relação entre as variáveis contínuas "temp_superficie" e "pressao". Adicione rótulos aos eixos x e y, e destaque cores diferentes para cada ano (utilizando a variável categórica "ano").
 :::
 
 ## Exercícios de fixação 1 a - Resposta
@@ -269,9 +248,9 @@ hist(casas$garagem_area,
 )
 ```
 
-## Exercícios de fixação 2 - Resposta
+## Exercícios de fixação 2 a - Resposta
 
-Criando um gráfico de barras para a variável categórica "nuvem_baixa"  
+Criando um gráfico de barras para a variável categórica "nuvem_baixa"
 
 ```{r}
 
@@ -287,7 +266,7 @@ barplot(table(dados_atmosfera$nuvem_baixa),
 
 ```
 
-## Exercícios de fixação 2 - Resposta
+## Exercícios de fixação 2 b - Resposta
 
 Criando um gráfico de dispersão para as variáveis contínuas "temp_superficie" e "pressao"
 
@@ -323,8 +302,8 @@ O que é a gramática dos gráficos?
 -   O ggplot2 é um pacote do R que implementa a gramática dos gráficos.
 
 ## ggplot2 - Exemplo
-  
-```{r}  
+
+```{r}
 #| echo: true
 ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
     geom_point() +
@@ -332,7 +311,7 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
     theme_minimal()
 ```
 
-## Camadas 
+## ggplot2 - Elementos da gramática
 
 ```{r}
 #| echo: true
@@ -341,9 +320,7 @@ ggplot()
 
 ```
 
-
 ## ggplot2 - Elementos da gramática
-
 
 ```{r}
 
@@ -359,13 +336,8 @@ geom <- geom_point()
 # Escalas: Controla como os dados são mapeados para os aspectos visuais do gráfico.
 scale <- scale_y_log10()
 
-# Facets: Permite criar múltiplos gráficos pequenos, cada um mostrando um subconjunto dos dados.
-facet <- facet_wrap(~cyl)
-
 # Estatísticas: Realiza cálculos nos dados.
 stat <- stat_summary(fun = mean, geom = "point", color = "red", size = 3)
-
-# Coordenadas: Define o sistema de coordenadas do gráfico.
 
 # Tema: Controla a aparência não-dados do gráfico, como a cor de fundo e a fonte do texto.
 theme <- theme_minimal()
@@ -379,12 +351,11 @@ labels <- labs(
 )
 
 # Criar o gráfico
-ggplot(data, aes) + geom + scale + facet + stat + theme + labels
+ggplot(data, aes) + geom + scale + stat + theme + labels
 
 ```
 
 ## ggplot2 - Elementos da gramática
-
 
 ```{r}
 #| echo: true
@@ -402,9 +373,6 @@ geom <- geom_point()
 # Escalas: Controla como os dados são mapeados para os aspectos visuais do gráfico.
 scale <- scale_y_log10()
 
-# Facets: Permite criar múltiplos gráficos pequenos, cada um mostrando um subconjunto dos dados.
-facet <- facet_wrap(~cyl)
-
 # Estatísticas: Realiza cálculos nos dados.
 stat <- stat_summary(fun = mean, geom = "point", color = "red", size = 3)
 
@@ -422,12 +390,11 @@ labels <- labs(
 )
 
 # Criar o gráfico
-ggplot(data, aes) + geom + scale + facet + stat + theme + labels
+ggplot(data, aes) + geom + scale + stat + theme + labels
 
 ```
 
 ## ggplot2 - Elementos da gramática
-
 
 ```{r}
 #| echo: true
@@ -437,7 +404,7 @@ ggplot(data, aes) + geom + scale + facet + stat + theme + labels
 ggplot(mtcars, aes(x = mpg, y = hp)) +
     geom_point() +
     scale_y_log10() +
-    facet_wrap(~cyl) +
+    facet_wrap(~am) + # cria uma faceta para cada valor único da variável am (transmissão manual ou automática)
     stat_summary(fun = mean, geom = "point", color = "red", size = 3) +
     theme_minimal() +
     labs(
@@ -449,10 +416,9 @@ ggplot(mtcars, aes(x = mpg, y = hp)) +
 
 ```
 
-
-
 ## Gramática dos gráficos e ggplot2 - cores
 
+O argumento color mapeia uma variável categórica para as cores dos pontos
 
 ```{r}
 
@@ -460,6 +426,45 @@ ggplot(mtcars, aes(x = mpg, y = hp)) +
 ggplot(data, aes(x = mpg, y = hp, color = factor(cyl))) +
     geom_point() +
     labs(title = "Relação entre MPG e HP", x = "MPG", y = "HP") +
+    theme_minimal()
+
+```
+
+## Gramática dos gráficos e ggplot2 - cores
+
+Se quisermos definir uma cor especifica temos que tomar cuidado com a localização do argumento color, por exemplo, se quisermos que todos os pontos sejam vermelhos, devemos colocar o argumento color dentro da função geom_point mas fora da função aes. Mas se quisermos mapear uma variável contínua para as cores dos pontos, devemos colocar o argumento color dentro da função aes.
+
+```{r}
+
+ggplot(data, aes(x = mpg, y = hp)) +
+    geom_point(color = "red") +
+    labs(title = "Relação entre MPG e HP", x = "MPG", y = "HP") +
+    theme_minimal()
+
+```
+
+```{r}
+
+ggplot(data, aes(x = mpg, y = hp, color = wt)) +
+    geom_point() +
+    labs(title = "Relação entre MPG e HP", x = "MPG", y = "HP") +
+    theme_minimal()
+
+```
+
+## Gramática dos gráficos e ggplot2 - fill
+
+O argumento fill mapeia uma variável categórica para o preenchimento das barras, a diferença entre color e fill é que color mapeia para a cor da borda e fill mapeia para o preenchimento. Além disso,
+
+```{r}
+
+ggplot(mtcars, aes(x = as.factor(cyl), fill = as.factor(cyl))) +
+    geom_bar() +
+    labs(
+        title = "Distribuição do Número de Cilindros",
+        x = "Número de cilindros",
+        fill = "Número de cilindros"
+    ) +
     theme_minimal()
 
 ```
@@ -472,7 +477,7 @@ Exemplo
 #| echo: true
 
 
-ggplot(data, aes(x = mpg, y = hp, shape = factor(cyl))) +
+ggplot(data, aes(x = mpg, y = hp, shape = factor(cyl), size = 10, color = as.factor(cyl))) +
     geom_point() +
     labs(title = "Relação entre MPG e HP", x = "MPG", y = "HP") +
     theme_minimal()
@@ -493,30 +498,30 @@ ggplot(data, aes(x = mpg, y = hp, size = wt)) +
 
 ```
 
+## Exercícios de fixação 3
+
+Refaça os gráficos dos exercícios de fixação 1 e 2 utilizando o pacote ggplot2 e a gramática dos gráficos. Comente sobre as diferenças entre os gráficos gerados com o pacote base do R e com o pacote ggplot2.
+
 ## Escalas Lineares e Logarítmicas
 
-:::{layout-ncol=2}
-
+::: {layout-ncol="2"}
 ```{r}
 #| echo: true
 
 x <- seq(1, 100, 1)
-y <- x^2
+y <- x
 
 plot(x, y, type = "l", col = "blue", lwd = 2, xlab = "X", ylab = "Y", main = "Gráfico com Escala Linear")
 ```
 
--  Escalas lineares são as mais comuns
--  Representam a relação entre duas variáveis de forma proporcional
--  Dados variam de forma linear
-
+-   Escalas lineares são as mais comuns
+-   Representam a relação entre duas variáveis de forma proporcional
+-   Dados variam de forma linear
 :::
 
 ## Escalas Lineares e Logarítmicas
 
-:::{layout-ncol=2}
-
-Exemplo de gráfico com escala logarítmica
+::: {layout-ncol="2"}
 
 ```{r}
 #| echo: true
@@ -534,6 +539,142 @@ plot(x, y,
 )
 ```
 
--  Escalas logarítmicas são usadas quando os dados variam de forma exponencial
--  
+Escalas logarítmicas são usadas quando os dados variam de forma exponencial
+  
 :::
+
+## Escalas Lineares e Logarítmicas
+
+Quando precisamos representar variáveis em escalas diferentes, podemos usar a função scale_x_log10() ou scale_y_log10() para poder visualizar os dados de forma mais clara. No exemplo abaixo queremos comparar duas regressões que tem ordem de grandeza diferente, para isso usamos a escala logarítmica no eixo y.
+
+```{r}
+#| echo: true
+#| eval: false
+
+x <- seq(1, 100, 1)
+
+y1 <- x
+
+y2 <- exp(x)
+
+# Gráfico com escala logarítmica no eixo y
+
+df <- data.frame(x = rep(x, 2), y = c(y1, y2), model = rep(c("linear", "exponencial"), each = length(x)))
+
+ggplot(df, aes(x = x, y = y, color = model)) +
+    geom_line() +
+    scale_y_log10() +
+    labs(title = "Comparação entre Regressões", x = "X", y = "Y (log scale)") +
+    theme_minimal()
+```
+
+## Escalas Lineares e Logarítmicas
+
+```{r}
+x <- seq(1, 100, 1)
+
+y1 <- x
+
+y2 <- exp(x)
+
+# Gráfico com escala logarítmica no eixo y
+
+df <- data.frame(x = rep(x, 2), y = c(y1, y2), modelo = rep(c("linear", "exponencial"), each = length(x)))
+
+ggplot(df, aes(x = x, y = y, color = modelo)) +
+    geom_line() +
+    scale_y_log10() +
+    labs(title = "Escala logarítmica", x = "X", y = "Y (Escala log)") +
+    theme_minimal()
+```
+
+## Escala percentual
+
+Usando o conjunto de dados casas, vamos criar um gráfico de barras para visualizar a distribuição da variável categórica "ano_construcao" e adicionar rótulos aos eixos de forma que a escala seja percentual.
+
+```{r}
+#| echo: true
+#| eval: false
+
+casas %>%
+    count(funcional) %>%
+    mutate(percentual = n / sum(n)) %>% # Calcula a frequência relativa
+    ggplot(aes(x = reorder(funcional, -percentual), y = percentual)) + # Reordena as barras de acordo com a frequência relativa
+    geom_bar(stat = "identity", fill = "lightblue", color = "black") +
+    labs(title = "Distribuição do Ano de Construção", x = "Ano de Construção", y = "Percentual") +
+    scale_y_continuous(labels = scales::percent) + # Define a escala percentual no eixo y
+    theme_minimal()
+
+```
+
+## Escala percentual
+
+```{r}
+
+casas %>%
+    count(funcional) %>%
+    mutate(percentual = n / sum(n)) %>% # Calcula a frequência relativa
+    ggplot(aes(x = reorder(funcional, -percentual), y = percentual)) + # Reordena as barras de acordo com a frequência relativa
+    geom_bar(stat = "identity", fill = "lightblue", color = "black") +
+    labs(title = "Distribuição do Ano de Construção", x = "Ano de Construção", y = "Percentual") +
+    scale_y_continuous(labels = scales::percent) + # Define a escala percentual no eixo y
+    theme_minimal()
+
+```
+
+## Escala percentual
+
+Também podemos adicionar rótulos para cada barra com a função geom_text
+```{r}
+#| echo: true
+#| eval: false
+
+casas %>%
+    count(porao_qualidade) %>%
+    mutate(percentual = n / sum(n)) %>%
+    ggplot(aes(x = reorder(porao_qualidade, -percentual), y = percentual, fill = porao_qualidade)) +
+    geom_bar(stat = "identity", color = "black") +
+    labs(title = "Distribuição da qualidade do porão", x = "Qualidade do porão", y = "Percentual") +
+    scale_y_continuous(labels = scales::percent) +
+    geom_text(aes(label = scales::percent(percentual)), vjust = -0.5) + # Adiciona rótulos e ajusta a posição
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5)) # Centraliza o título
+
+```
+
+## Escala percentual
+
+
+```{r}
+
+
+casas %>%
+    count(porao_qualidade) %>%
+    mutate(percentual = n / sum(n)) %>%
+    ggplot(aes(x = reorder(porao_qualidade, -percentual), y = percentual, fill = porao_qualidade)) +
+    geom_bar(stat = "identity", color = "black") +
+    labs(title = "Distribuição da qualidade do porão", x = "Qualidade do porão", y = "Percentual") +
+    scale_y_continuous(labels = scales::percent) +
+    geom_text(aes(label = scales::percent(percentual)), vjust = -0.5) + # Adiciona rótulos e ajusta a posição
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5)) # Centraliza o título
+```
+
+## Explorando dados com o pacote esquisse
+
+O pacote esquisse é uma ferramenta interativa para explorar e visualizar dados. podemos usá-lo para criar gráficos rapidamente e explorar a relação entre variáveis.
+
+```{r}
+#| echo: true
+#| eval: false
+
+# Instalar o pacote
+
+install.packages("esquisse")
+
+library(esquisse)
+
+esquisse::esquisser() # use :: para chamar a função esquisser do pacote esquisse sem precisar carregar o pacote inteiro
+
+```
+
