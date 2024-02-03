@@ -1,0 +1,282 @@
+[
+  {
+    "objectID": "index.html#marcus-ramalho",
+    "href": "index.html#marcus-ramalho",
+    "title": "Visualização de dados com R",
+    "section": "Marcus Ramalho",
+    "text": "Marcus Ramalho\n\nPesquiso FII’s/PKM/Web3.0 com ciência de dados\nMatlab/Fortran/Pascal/VBA/AutoLISP(LISP)/PHP/HTML/\nM(power query)/TypeScript/Python/R❤️e Rust(loading)\nAdministração UFF\nMestrando PPGAd-UFF"
+  },
+  {
+    "objectID": "index.html#objetivos",
+    "href": "index.html#objetivos",
+    "title": "Visualização de dados com R",
+    "section": "Objetivos",
+    "text": "Objetivos\nAula 1\n\nTipos de Gráficos por Tipo de Variável\nGráficos no R base, plot, hist, boxplot\nExercícios de fixação 1\ngramática dos gráficos e ggplot2\nExercícios de fixação 2\nEscalas\nExploração de dados com o pacote esquisse\nExercícios de fixação\nTarefa com nota"
+  },
+  {
+    "objectID": "index.html#tipos-de-variáveis",
+    "href": "index.html#tipos-de-variáveis",
+    "title": "Visualização de dados com R",
+    "section": "Tipos de variáveis",
+    "text": "Tipos de variáveis\n\nVariáveis categóricas - Representam categorias ou grupos\n\nNominais - Não possuem ordem Exemplo: sexo, cor dos olhos\nOrdinais - Possuem ordem Exemplo: escolaridade, estado civil\n\nVariáveis contínuas - Representam valores numéricos\n\nDiscretas - Valores inteiros Exemplo: número de filhos, número de carros, número de acessos\nContínuas - Valores reais Exemplo: peso, altura, salário, etc."
+  },
+  {
+    "objectID": "index.html#tipo-de-gráficos-por-tipo-de-variável",
+    "href": "index.html#tipo-de-gráficos-por-tipo-de-variável",
+    "title": "Visualização de dados com R",
+    "section": "Tipo de Gráficos por Tipo de Variável",
+    "text": "Tipo de Gráficos por Tipo de Variável\n\nVariáveis categóricas\n\nbarras\nsetor\netc…\n\nVariáveis contínuas\n\nHistograma\nboxplot\nGráfico de dispersão\netc…"
+  },
+  {
+    "objectID": "index.html#um-gráfico-para-cada-tipo-de-variável",
+    "href": "index.html#um-gráfico-para-cada-tipo-de-variável",
+    "title": "Visualização de dados com R",
+    "section": "Um gráfico para cada tipo de variável",
+    "text": "Um gráfico para cada tipo de variável\nFerramentas úteis:"
+  },
+  {
+    "objectID": "index.html#gráficos-no-r-base---plot",
+    "href": "index.html#gráficos-no-r-base---plot",
+    "title": "Visualização de dados com R",
+    "section": "Gráficos no R base - plot",
+    "text": "Gráficos no R base - plot\n\nplot(iris$Sepal.Length, iris$Sepal.Width,\n    col = iris$Species, pch = 19,\n    xlab = \"Comprimento\", ylab = \"Largura\", main = \"Comprimento x Largura da Sépala\"\n)\n\n# Legenda\nlegend(\n    \"topright\",\n    legend = levels(iris$Species),\n    col = c(\"black\", \"red\", \"green\"),\n    pch = 19,\n    title = \"Espécies\",\n    bg = \"lightgray\"\n)"
+  },
+  {
+    "objectID": "index.html#gráficos-no-r-base---plot-1",
+    "href": "index.html#gráficos-no-r-base---plot-1",
+    "title": "Visualização de dados com R",
+    "section": "Gráficos no R base - plot",
+    "text": "Gráficos no R base - plot"
+  },
+  {
+    "objectID": "index.html#gráficos-no-r-base---hist",
+    "href": "index.html#gráficos-no-r-base---hist",
+    "title": "Visualização de dados com R",
+    "section": "Gráficos no R base - hist",
+    "text": "Gráficos no R base - hist\n\nhist(iris$Sepal.Length,\n    xlab = \"Comprimento da Sépala\",\n    ylab = \"Frequência\",\n    main = \"Histograma do Comprimento da Sépala\",\n    col = \"lightblue\",\n    border = \"black\"\n)"
+  },
+  {
+    "objectID": "index.html#gráficos-no-r-base---boxplot",
+    "href": "index.html#gráficos-no-r-base---boxplot",
+    "title": "Visualização de dados com R",
+    "section": "Gráficos no R base - boxplot",
+    "text": "Gráficos no R base - boxplot\n\nboxplot(iris$Sepal.Length,\n    xlab = \"Espécies\",\n    ylab = \"Comprimento da Sépala\",\n    main = \"Gráfico de Caixa do Comprimento da Sépala\",\n    col = \"lightblue\",\n    border = \"black\"\n)"
+  },
+  {
+    "objectID": "index.html#gráficos-no-r-base---barplot",
+    "href": "index.html#gráficos-no-r-base---barplot",
+    "title": "Visualização de dados com R",
+    "section": "Gráficos no R base - barplot",
+    "text": "Gráficos no R base - barplot\n\nbarplot(table(iris$Species),\n    xlab = \"Espécies\",\n    ylab = \"Contagem\",\n    main = \"Gráfico de Barras das Espécies\",\n    col = \"lightblue\",\n    border = \"black\"\n)"
+  },
+  {
+    "objectID": "index.html#gráficos-no-r-base---pie",
+    "href": "index.html#gráficos-no-r-base---pie",
+    "title": "Visualização de dados com R",
+    "section": "Gráficos no R base - pie",
+    "text": "Gráficos no R base - pie\n\npie(table(iris$Species),\n    main = \"Gráfico de Pizza das Espécies\",\n    col = c(\"lightblue\", \"lightgreen\", \"lightpink\"),\n    border = \"black\"\n)"
+  },
+  {
+    "objectID": "index.html#exercícios-de-fixação-1",
+    "href": "index.html#exercícios-de-fixação-1",
+    "title": "Visualização de dados com R",
+    "section": "Exercícios de fixação 1",
+    "text": "Exercícios de fixação 1\n\n1 - Use o conjunto de dados ‘casas’ do pacote ‘dados’ para responder as questões a seguir.\n\ninstall.packages(\"dados\")\nlibrary(dados)\n\n\nIdentifique duas variáveis categóricas. Liste cinco exemplos de valores únicos para uma das variáveis categóricas.\nUtilizando o pacote de gráficos base do R, escolha uma variável contínua e gere um histograma para visualizar a distribuição. Explique o que você observa no gráfico.\n\n2 - Use o conjunto de dados ‘dados_atmosfera’ do pacote ‘dados’ para responder as questões a seguir.\n\nUtilizando o pacote de gráficos base do R, crie um gráfico de barras para representar a distribuição da variável categórica “nuvem_baixa”. Adicione rótulos aos eixos.\nCrie um gráfico de dispersão para visualizar a relação entre as variáveis contínuas “temp_superficie” e “pressao”. Adicione rótulos aos eixos x e y, e destaque cores diferentes para cada ano (utilizando a variável categórica “ano”)."
+  },
+  {
+    "objectID": "index.html#exercícios-de-fixação-1-a---resposta",
+    "href": "index.html#exercícios-de-fixação-1-a---resposta",
+    "title": "Visualização de dados com R",
+    "section": "Exercícios de fixação 1 a - Resposta",
+    "text": "Exercícios de fixação 1 a - Resposta\nIdentificando todas as variáveis não numéricas do conjunto de dados\n\n# Carregar o pacote\nlibrary(dados)\n\ncasas %&gt;%\n    select_if(~ is.character(.)) %&gt;%\n    names(.)\n\n [1] \"pid\"                            \"moradia_classe\"                \n [3] \"moradia_zoneamento\"             \"rua_tipo\"                      \n [5] \"beco_tipo\"                      \"lote_formato\"                  \n [7] \"terreno_contorno\"               \"utilidades\"                    \n [9] \"lote_config\"                    \"terreno_declive\"               \n[11] \"vizinhanca\"                     \"condicao_1\"                    \n[13] \"condicao_2\"                     \"moradia_tipo\"                  \n[15] \"moradia_estilo\"                 \"geral_qualidade\"               \n[17] \"geral_condicao\"                 \"telhado_estilo\"                \n[19] \"telhado_material\"               \"exterior_cobertura_1\"          \n[21] \"exterior_cobertura_2\"           \"alvenaria_tipo\"                \n[23] \"exterior_qualidade\"             \"exterior_condicao\"             \n[25] \"fundacao_tipo\"                  \"porao_qualidade\"               \n[27] \"porao_condicao\"                 \"porao_exposicao\"               \n[29] \"porao_acabamento_1\"             \"porao_acabamento_2\"            \n[31] \"aquecimento_tipo\"               \"aquecimento_qualidade_condicao\"\n[33] \"ar_condicionado_central\"        \"sistema_eletrico_tipo\"         \n[35] \"cozinha_qualidade\"              \"funcional\"                     \n[37] \"lareira_qualidade\"              \"garagem_tipo\"                  \n[39] \"garagem_acabamento\"             \"garagem_qualidade\"             \n[41] \"garagem_condicao\"               \"entrada_veiculo_pavimentada\"   \n[43] \"piscina_qualidade\"              \"cerca_qualidade\"               \n[45] \"funcionalidades_diversas\"       \"venda_tipo\"                    \n[47] \"venda_condicao\""
+  },
+  {
+    "objectID": "index.html#exercícios-de-fixação-1-a---resposta-1",
+    "href": "index.html#exercícios-de-fixação-1-a---resposta-1",
+    "title": "Visualização de dados com R",
+    "section": "Exercícios de fixação 1 a - Resposta",
+    "text": "Exercícios de fixação 1 a - Resposta\nListando cinco exemplos de valores únicos para a variável categórica “vizinhanca”\n\ncasas %&gt;%\n    count(vizinhanca) %&gt;%\n    head(5)\n\n# A tibble: 5 × 2\n  vizinhanca              n\n  &lt;chr&gt;               &lt;int&gt;\n1 Bloomington Heights    28\n2 Bluestem               10\n3 Briardale              30\n4 Brookside             108\n5 Clear Creek            44"
+  },
+  {
+    "objectID": "index.html#exercícios-de-fixação-1-b---resposta",
+    "href": "index.html#exercícios-de-fixação-1-b---resposta",
+    "title": "Visualização de dados com R",
+    "section": "Exercícios de fixação 1 b - Resposta",
+    "text": "Exercícios de fixação 1 b - Resposta\nCriando um histograma para a variável contínua “area_construida”\n\n# Criar o gráfico\nhist(casas$garagem_area,\n    xlab = \"Área da Garagem\",\n    ylab = \"Frequência\",\n    main = \"Histograma da Área da Garagem\",\n    col = \"lightblue\",\n    border = \"lightblue\"\n)"
+  },
+  {
+    "objectID": "index.html#exercícios-de-fixação-2-a---resposta",
+    "href": "index.html#exercícios-de-fixação-2-a---resposta",
+    "title": "Visualização de dados com R",
+    "section": "Exercícios de fixação 2 a - Resposta",
+    "text": "Exercícios de fixação 2 a - Resposta\nCriando um gráfico de barras para a variável categórica “nuvem_baixa”\n\nbarplot(table(dados_atmosfera$nuvem_baixa),\n    xlab = \"Nuvem Baixa\",\n    ylab = \"Contagem\",\n    main = \"Distribuição de Nuvem Baixa\",\n    col = \"lightblue\",\n    border = \"black\"\n)"
+  },
+  {
+    "objectID": "index.html#exercícios-de-fixação-2-b---resposta",
+    "href": "index.html#exercícios-de-fixação-2-b---resposta",
+    "title": "Visualização de dados com R",
+    "section": "Exercícios de fixação 2 b - Resposta",
+    "text": "Exercícios de fixação 2 b - Resposta\nCriando um gráfico de dispersão para as variáveis contínuas “temp_superficie” e “pressao”\n\n# Criar o gráfico\nplot(dados_atmosfera$temp_superficie, dados_atmosfera$pressao,\n    col = as.numeric(dados_atmosfera$ano), pch = 19,\n    xlab = \"Temperatura da Superfície\",\n    ylab = \"Pressão\",\n    main = \"Relação entre Temperatura da Superfície e Pressão\"\n)\n\n# Adicionar a legenda\nlegend(\n    \"topright\",\n    legend = unique(dados_atmosfera$ano),\n    col = unique(as.numeric(dados_atmosfera$ano)),\n    pch = 19,\n    title = \"Ano\",\n    bg = \"lightgray\"\n)"
+  },
+  {
+    "objectID": "index.html#gramática-dos-gráficos-e-ggplot2",
+    "href": "index.html#gramática-dos-gráficos-e-ggplot2",
+    "title": "Visualização de dados com R",
+    "section": "Gramática dos gráficos e ggplot2",
+    "text": "Gramática dos gráficos e ggplot2\nO que é a gramática dos gráficos?\n\nÉ um conjunto de regras que descrevem a estrutura de um gráfico e como ele é construído a partir dos dados.\nO ggplot2 é um pacote do R que implementa a gramática dos gráficos."
+  },
+  {
+    "objectID": "index.html#ggplot2---exemplo",
+    "href": "index.html#ggplot2---exemplo",
+    "title": "Visualização de dados com R",
+    "section": "ggplot2 - Exemplo",
+    "text": "ggplot2 - Exemplo\n\nggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +\n    geom_point() +\n    labs(title = \"Comprimento x Largura da Sépala\", x = \"Comprimento\", y = \"Largura\") +\n    theme_minimal()"
+  },
+  {
+    "objectID": "index.html#ggplot2---elementos-da-gramática",
+    "href": "index.html#ggplot2---elementos-da-gramática",
+    "title": "Visualização de dados com R",
+    "section": "ggplot2 - Elementos da gramática",
+    "text": "ggplot2 - Elementos da gramática\n\nggplot()"
+  },
+  {
+    "objectID": "index.html#ggplot2---elementos-da-gramática-1",
+    "href": "index.html#ggplot2---elementos-da-gramática-1",
+    "title": "Visualização de dados com R",
+    "section": "ggplot2 - Elementos da gramática",
+    "text": "ggplot2 - Elementos da gramática"
+  },
+  {
+    "objectID": "index.html#ggplot2---elementos-da-gramática-2",
+    "href": "index.html#ggplot2---elementos-da-gramática-2",
+    "title": "Visualização de dados com R",
+    "section": "ggplot2 - Elementos da gramática",
+    "text": "ggplot2 - Elementos da gramática\n\n# Dados: Este é o conjunto de dados que queremos visualizar.\ndata &lt;- mtcars\n\n# Aesthetics: Mapeia variáveis nos dados para aspectos visuais do gráfico.\naes &lt;- aes(x = mpg, y = hp)\n\n# Geometrias: Descreve o tipo de gráfico que queremos criar.\ngeom &lt;- geom_point()\n\n# Escalas: Controla como os dados são mapeados para os aspectos visuais do gráfico.\nscale &lt;- scale_y_log10()\n\n# Estatísticas: Realiza cálculos nos dados.\nstat &lt;- stat_summary(fun = mean, geom = \"point\", color = \"red\", size = 3)\n\n# Coordenadas: Define o sistema de coordenadas do gráfico.\n\n# Tema: Controla a aparência não-dados do gráfico, como a cor de fundo e a fonte do texto.\ntheme &lt;- theme_minimal()\n\n# Títulos e legendas\nlabels &lt;- labs(\n    title = \"Relação entre MPG e HP\",\n    x = \"MPG\",\n    y = \"HP (escala logarítmica)\",\n    color = \"Número de cilindros\"\n)\n\n# Criar o gráfico\nggplot(data, aes) + geom + scale + stat + theme + labels"
+  },
+  {
+    "objectID": "index.html#ggplot2---elementos-da-gramática-3",
+    "href": "index.html#ggplot2---elementos-da-gramática-3",
+    "title": "Visualização de dados com R",
+    "section": "ggplot2 - Elementos da gramática",
+    "text": "ggplot2 - Elementos da gramática\n\n# Criar o gráfico\nggplot(mtcars, aes(x = mpg, y = hp)) +\n    geom_point() +\n    scale_y_log10() +\n    facet_wrap(~am) + # cria uma faceta para cada valor único da variável am (transmissão manual ou automática)\n    stat_summary(fun = mean, geom = \"point\", color = \"red\", size = 3) +\n    theme_minimal() +\n    labs(\n        title = \"Relação entre MPG e HP\",\n        x = \"MPG\",\n        y = \"HP (escala logarítmica)\",\n        color = \"Número de cilindros\"\n    )"
+  },
+  {
+    "objectID": "index.html#gramática-dos-gráficos-e-ggplot2---cores",
+    "href": "index.html#gramática-dos-gráficos-e-ggplot2---cores",
+    "title": "Visualização de dados com R",
+    "section": "Gramática dos gráficos e ggplot2 - cores",
+    "text": "Gramática dos gráficos e ggplot2 - cores\nO argumento color mapeia uma variável categórica para as cores dos pontos\n\nggplot(data, aes(x = mpg, y = hp, color = factor(cyl))) +\n    geom_point() +\n    labs(title = \"Relação entre MPG e HP\", x = \"MPG\", y = \"HP\") +\n    theme_minimal()"
+  },
+  {
+    "objectID": "index.html#gramática-dos-gráficos-e-ggplot2---cores-1",
+    "href": "index.html#gramática-dos-gráficos-e-ggplot2---cores-1",
+    "title": "Visualização de dados com R",
+    "section": "Gramática dos gráficos e ggplot2 - cores",
+    "text": "Gramática dos gráficos e ggplot2 - cores\nSe quisermos definir uma cor especifica temos que tomar cuidado com a localização do argumento color, por exemplo, se quisermos que todos os pontos sejam vermelhos, devemos colocar o argumento color dentro da função geom_point mas fora da função aes. Mas se quisermos mapear uma variável contínua para as cores dos pontos, devemos colocar o argumento color dentro da função aes.\n\nggplot(data, aes(x = mpg, y = hp)) +\n    geom_point(color = \"red\") +\n    labs(title = \"Relação entre MPG e HP\", x = \"MPG\", y = \"HP\") +\n    theme_minimal()"
+  },
+  {
+    "objectID": "index.html#gramática-dos-gráficos-e-ggplot2---cores-2",
+    "href": "index.html#gramática-dos-gráficos-e-ggplot2---cores-2",
+    "title": "Visualização de dados com R",
+    "section": "Gramática dos gráficos e ggplot2 - cores",
+    "text": "Gramática dos gráficos e ggplot2 - cores\n\nggplot(data, aes(x = mpg, y = hp, color = wt)) +\n    geom_point() +\n    labs(title = \"Relação entre MPG e HP\", x = \"MPG\", y = \"HP\") +\n    theme_minimal()"
+  },
+  {
+    "objectID": "index.html#gramática-dos-gráficos-e-ggplot2---fill",
+    "href": "index.html#gramática-dos-gráficos-e-ggplot2---fill",
+    "title": "Visualização de dados com R",
+    "section": "Gramática dos gráficos e ggplot2 - fill",
+    "text": "Gramática dos gráficos e ggplot2 - fill\nO argumento fill mapeia uma variável categórica para o preenchimento das barras, a diferença entre color e fill é que color mapeia para a cor da borda e fill mapeia para o preenchimento.\n\nggplot(mtcars, aes(x = as.factor(cyl), fill = as.factor(cyl))) +\n    geom_bar() +\n    labs(\n        title = \"Distribuição do Número de Cilindros\",\n        x = \"Número de cilindros\",\n        fill = \"Número de cilindros\"\n    ) +\n    theme_minimal()"
+  },
+  {
+    "objectID": "index.html#gramática-dos-gráficos-e-ggplot2---formas",
+    "href": "index.html#gramática-dos-gráficos-e-ggplot2---formas",
+    "title": "Visualização de dados com R",
+    "section": "Gramática dos gráficos e ggplot2 - formas",
+    "text": "Gramática dos gráficos e ggplot2 - formas\nExemplo\n\nggplot(data, aes(x = mpg, y = hp, shape = factor(cyl), size = 10, color = as.factor(cyl))) +\n    geom_point() +\n    labs(title = \"Relação entre MPG e HP\", x = \"MPG\", y = \"HP\") +\n    theme_minimal()"
+  },
+  {
+    "objectID": "index.html#gramática-dos-gráficos-e-ggplot2---tamanhos",
+    "href": "index.html#gramática-dos-gráficos-e-ggplot2---tamanhos",
+    "title": "Visualização de dados com R",
+    "section": "Gramática dos gráficos e ggplot2 - tamanhos",
+    "text": "Gramática dos gráficos e ggplot2 - tamanhos\nExemplo\n\nggplot(data, aes(x = mpg, y = hp, size = wt)) +\n    geom_point() +\n    labs(title = \"Relação entre MPG e HP\", x = \"MPG\", y = \"HP\") +\n    theme_minimal()"
+  },
+  {
+    "objectID": "index.html#exercícios-de-fixação-3",
+    "href": "index.html#exercícios-de-fixação-3",
+    "title": "Visualização de dados com R",
+    "section": "Exercícios de fixação 3",
+    "text": "Exercícios de fixação 3\n\nRefaça os gráficos dos exercícios de fixação 1 e 2 utilizando o pacote ggplot2 e a gramática dos gráficos. Comente sobre as diferenças entre os gráficos gerados com o pacote base do R e com o pacote ggplot2.\nExplore os geoms disponíveis no ggplot2 e crie um gráfico usando o pacote dados e o geom de sua escolha."
+  },
+  {
+    "objectID": "index.html#escalas-lineares-e-logarítmicas",
+    "href": "index.html#escalas-lineares-e-logarítmicas",
+    "title": "Visualização de dados com R",
+    "section": "Escalas Lineares e Logarítmicas",
+    "text": "Escalas Lineares e Logarítmicas\nx &lt;- seq(1, 100, 1)\ny &lt;- x\n\nplot(x, y, type = \"l\", col = \"blue\", lwd = 2, xlab = \"X\", ylab = \"Y\", main = \"Gráfico com Escala Linear\")\n\n\n\n\n\n\n\n\n\n\n\n\n\nEscalas lineares são as mais comuns\nRepresentam a relação entre duas variáveis de forma proporcional\nDados variam de forma linear"
+  },
+  {
+    "objectID": "index.html#escalas-lineares-e-logarítmicas-1",
+    "href": "index.html#escalas-lineares-e-logarítmicas-1",
+    "title": "Visualização de dados com R",
+    "section": "Escalas Lineares e Logarítmicas",
+    "text": "Escalas Lineares e Logarítmicas\n# Dados\nx &lt;- seq(1, 100, 1)\ny &lt;- exp(x)\n\n# Gráfico com escala logarítmica no eixo y\nplot(x, y,\n    type = \"l\", col = \"blue\", lwd = 2,\n    xlab = \"X\", ylab = \"Y (log scale)\",\n    main = \"Gráfico com Escala Logarítmica\",\n    log = \"y\"\n)\n\n\n\n\n\n\n\n\n\n\n\n\nEscalas logarítmicas são usadas quando os dados variam de forma exponencial"
+  },
+  {
+    "objectID": "index.html#escalas-lineares-e-logarítmicas-2",
+    "href": "index.html#escalas-lineares-e-logarítmicas-2",
+    "title": "Visualização de dados com R",
+    "section": "Escalas Lineares e Logarítmicas",
+    "text": "Escalas Lineares e Logarítmicas\nQuando precisamos representar variáveis em escalas diferentes, podemos usar a função scale_x_log10() ou scale_y_log10() para poder visualizar os dados de forma mais clara. No exemplo abaixo queremos comparar duas regressões que tem ordem de grandeza diferente, para isso usamos a escala logarítmica no eixo y.\n\nx &lt;- seq(1, 100, 1)\n\ny1 &lt;- x\n\ny2 &lt;- exp(x)\n\n# Gráfico com escala logarítmica no eixo y\n\ndf &lt;- data.frame(x = rep(x, 2), y = c(y1, y2), modelo = rep(c(\"linear\", \"exponencial\"), each = length(x)))\n\nggplot(df, aes(x = x, y = y, color = modelo)) +\n    geom_line() +\n    scale_y_log10() +\n    labs(title = \"Escala logarítmica\", x = \"X\", y = \"Y (Escala log)\") +\n    theme_minimal()"
+  },
+  {
+    "objectID": "index.html#exemplo-de-gráfico-de-barras-com-escala-percentual-para-variável-categórica",
+    "href": "index.html#exemplo-de-gráfico-de-barras-com-escala-percentual-para-variável-categórica",
+    "title": "Visualização de dados com R",
+    "section": "Exemplo de gráfico de barras com escala percentual para variável categórica",
+    "text": "Exemplo de gráfico de barras com escala percentual para variável categórica\nUsando o conjunto de dados casas, vamos criar um gráfico de barras para visualizar a distribuição da variável categórica “porao_qualidade” e adicionar rótulos aos eixos de forma que a escala seja percentual."
+  },
+  {
+    "objectID": "index.html#exemplo-de-gráfico-de-barras-com-escala-percentual-para-variável-categórica-1",
+    "href": "index.html#exemplo-de-gráfico-de-barras-com-escala-percentual-para-variável-categórica-1",
+    "title": "Visualização de dados com R",
+    "section": "Exemplo de gráfico de barras com escala percentual para variável categórica",
+    "text": "Exemplo de gráfico de barras com escala percentual para variável categórica\nTambém podemos adicionar rótulos para cada barra com a função geom_text\n\ncasas %&gt;%\n    count(porao_qualidade) %&gt;%\n    mutate(percentual = n / sum(n)) %&gt;%\n    ggplot(aes(x = reorder(porao_qualidade, -percentual), y = percentual, fill = porao_qualidade)) +\n    geom_bar(stat = \"identity\", color = \"black\") +\n    labs(title = \"Distribuição da qualidade do porão\", x = \"Qualidade do porão\", y = \"Percentual\") +\n    scale_y_continuous(labels = scales::percent) +\n    geom_text(aes(label = scales::percent(percentual)), vjust = -0.5) + # Adiciona rótulos e ajusta a posição\n    theme_minimal() +\n    theme(plot.title = element_text(hjust = 0.5)) # Centraliza o título"
+  },
+  {
+    "objectID": "index.html#exemplo-de-gráfico-de-histograma-no-ggplot2",
+    "href": "index.html#exemplo-de-gráfico-de-histograma-no-ggplot2",
+    "title": "Visualização de dados com R",
+    "section": "Exemplo de gráfico de histograma no ggplot2",
+    "text": "Exemplo de gráfico de histograma no ggplot2\n\ncasas %&gt;%\n    ggplot(aes(x = garagem_area)) +\n    geom_histogram(binwidth = 100, fill = \"orange\", color = \"red\") + # binwidth define a largura das barras\n    labs(title = \"Distribuição da área da garagem\", x = \"Área da garagem\", y = \"Frequência\") +\n    theme_minimal() +\n    theme(plot.title = element_text(hjust = 0.5)) # Centraliza o título"
+  },
+  {
+    "objectID": "index.html#exemplo-de-boxplot-no-ggplot2-com-o-dataset-casas",
+    "href": "index.html#exemplo-de-boxplot-no-ggplot2-com-o-dataset-casas",
+    "title": "Visualização de dados com R",
+    "section": "Exemplo de boxplot no ggplot2 com o dataset casas",
+    "text": "Exemplo de boxplot no ggplot2 com o dataset casas\n\ncasas %&gt;%\n    ggplot(aes(x = porao_qualidade, y = construcao_ano, fill = porao_qualidade)) +\n    geom_boxplot() +\n    labs(title = \"Distribuição da área construída por qualidade do porão\", x = \"Qualidade do porão\", y = \"Ano\") +\n    theme_minimal() +\n    theme(plot.title = element_text(hjust = 0.5)) # Centraliza o título"
+  },
+  {
+    "objectID": "index.html#explorando-dados-com-o-pacote-esquisse",
+    "href": "index.html#explorando-dados-com-o-pacote-esquisse",
+    "title": "Visualização de dados com R",
+    "section": "Explorando dados com o pacote esquisse",
+    "text": "Explorando dados com o pacote esquisse\nO pacote esquisse é uma ferramenta interativa para explorar e visualizar dados. podemos usá-lo para criar gráficos rapidamente e explorar a relação entre variáveis.\n\n# Instalar o pacote\n\ninstall.packages(\"esquisse\")\n\nlibrary(esquisse)\n\nesquisse::esquisser() # use :: para chamar a função esquisser do pacote esquisse sem precisar carregar o pacote inteiro"
+  },
+  {
+    "objectID": "index.html#exercícios-de-fixação-4",
+    "href": "index.html#exercícios-de-fixação-4",
+    "title": "Visualização de dados com R",
+    "section": "Exercícios de fixação 4",
+    "text": "Exercícios de fixação 4\nUtilize o pacote esquisse para explorar o conjunto de dados casas. Crie dois gráficos, um explorando variáveis categóricas e outro explorando variáveis contínuas. Apresente os gráficos e comente sobre as relações observadas."
+  },
+  {
+    "objectID": "index.html#tarefa-final",
+    "href": "index.html#tarefa-final",
+    "title": "Visualização de dados com R",
+    "section": "Tarefa final",
+    "text": "Tarefa final\nProcure um conjunto de dados do seu interesse e crie um relatório exploratório dos dados utilizando o pacote esquisse. O relatório deve conter: um gráfico de barras, um histograma, um boxplot e um gráfico de dispersão. Comente sobre as relações observadas nos gráficos.\nSugestões :\nCaso não tenha um conjunto de dados específico em mente, você pode utilizar um dos conjuntos de dados disponíveis no pacote ‘dados’ ou no kaggle.\nO relatório deve ser entregue em um arquivo qmd ou rmd.\n\n\n\nUniversidade Federal Fluminense - Programa de formação de executivos - Ciência de dados"
+  }
+]
